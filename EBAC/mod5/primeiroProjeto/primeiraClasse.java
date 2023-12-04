@@ -1,4 +1,4 @@
-package EBAC;
+package EBAC.mod5.primeiroProjeto;
 
 public class primeiraClasse {
 
