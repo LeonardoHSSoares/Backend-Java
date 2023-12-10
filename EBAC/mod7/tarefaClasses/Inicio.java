@@ -3,8 +3,18 @@ package EBAC.mod7.tarefaClasses;
 /**
  * @author leonardo
  */
-public class Inicio {
-    public static void main(String[] args) {
 
+    // Classe principal para testar as demais classes
+    public class Inicio {
+
+        // Método principal (para testar a classe Carro)
+        public static void main(String[] args) {
+
+            // Criando uma instância da classe Carro
+            Carro fusca = new Carro("Volkswagem","Fusca", 1965);
+
+            fusca.exibirInformacoes();
+
+
+        }
     }
-}
