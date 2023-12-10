@@ -1,0 +1,7 @@
+Programação Procedural:
+
+Na programação procedural, o código é organizado em torno de procedimentos ou funções. Esses procedimentos consistem em uma sequência de instruções que executam uma tarefa específica.
+
+Programação Orientada a Objetos:
+
+Na programação orientada a objetos (POO), o código é estruturado em torno de objetos, que são instâncias de classes. Cada objeto tem atributos (dados) e métodos (funções) associados a ele.
