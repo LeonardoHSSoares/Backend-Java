@@ -1,0 +1,37 @@
+Algoritmo Café da Manhã
+
+1- Acordar:
+    1- abrir os olhos
+    2- Levantar da cama
+    3- colocar os chinelos
+    4- ir em direção ao banheiro
+2- Higiene Pessoal:
+    1- escovar os dentes
+    2- vestir roupas confortáveis para o dia
+    3- decidir o que será preparado para o café
+    4- ir em direção à cozinha
+3- Preparação da Refeição:
+    1- confirmar se tem todos os ingredientes necessarios
+    2- confirmar se tem todos utensilios necessarios
+    3- colocar a quantidade de água numa panela
+    4- colocar a panela com aguua na boca do fogão
+    5- acender a boca do fogão
+    6- preparar o ambiente para coar o café
+        1- se agua não estiver fervendo
+            1- colocar o coador de café sobre um recipiente
+            2- colocar o pó de café no coador
+            3- aguarde até a agua ferver
+        2- se agua estiver fervendo
+            1-despeje a agua dentro do recipiente com pó de café
+            2- aguarde ató coar café totalmente
+4- Desfrutar do Café da Manhã:
+    1- se café cuou totalmente 
+        1- pegue uma xicara
+        2- preencha a xicara com o café coado
+        3- sentar-se à mesa.
+        4- tome o café da manhã
+    2- se café nao coou totalmente
+        1- aguarde o café ser coado totalmente 
+5- Limpeza da cozinha:
+    1- lavar a louça utilizada
+    2- organizar a cozinha
