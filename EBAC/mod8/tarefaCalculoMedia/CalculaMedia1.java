@@ -20,11 +20,11 @@ public class CalculaMedia1{
 
         desenhaLinha();
         System.out.println("Digite a terceira nota: ");
-        float nota3 = leia.nextFloat();
+        double nota3 = leia.nextFloat();
 
         desenhaLinha();
         System.out.println("Digite a quarta nota: ");
-        float nota4 = leia.nextFloat();
+        double nota4 = leia.nextFloat();
 
         leia.close();
 

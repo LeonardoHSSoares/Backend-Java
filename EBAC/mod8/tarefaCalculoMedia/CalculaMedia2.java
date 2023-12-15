@@ -2,10 +2,17 @@ package EBAC.mod8.tarefaCalculoMedia;
 
 import java.util.Scanner;
 
+/**
+ * @author Leonardo
+ * 
+ */
 public class CalculaMedia2{
    
     int cont = 1;
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         
         calculaMedia();
