@@ -21,7 +21,7 @@ public class CalculaMedia2{
 
     public static void calculaMedia() {
         
-        double[] notas = new double[4];
+        double[] notas = new double[3];
         int cont = 1;
 
         Scanner leia = new Scanner(System.in);
