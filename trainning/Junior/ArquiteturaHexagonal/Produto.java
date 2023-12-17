@@ -20,10 +20,6 @@ public class Produto {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public double getPreco() {
         return preco;
     }
