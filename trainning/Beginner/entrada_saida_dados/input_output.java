@@ -1,4 +1,4 @@
-package entrada_saida_dados;
+package trainning.Beginner.entrada_saida_dados;
 
 public class input_output {
 

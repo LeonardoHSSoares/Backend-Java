@@ -1,4 +1,4 @@
-package HelloWorld;
+package trainning.Beginner.HelloWorld;
 
 public class helloWorld {
 
