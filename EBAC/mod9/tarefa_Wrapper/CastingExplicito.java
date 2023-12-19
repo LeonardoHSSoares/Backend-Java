@@ -16,6 +16,5 @@ public class CastingExplicito {
         //casting explícito
         Integer numero2 = (int) numero;
         System.out.println("Este numero "+numero2+" esta numa variavel do tipo Wrapper");
-        
     }
 }

@@ -1,4 +1,4 @@
-package trainning.Beginner.desvio_condicionais;
+package desvio_condicionais;
 
 public class if_else {
 

@@ -2,6 +2,7 @@ package EBAC.mod9.tarefa_Wrapper;
 
 import java.util.Scanner;
 
+//classe Boxing com casting implicito
 public class Boxing {
     
     public static void main(String args[]) {
