@@ -14,7 +14,8 @@ public class Boxing {
         System.out.print("\033[H\033[2J");
 
         System.out.println("Este numero "+numero+" esta numa variavel do tipo primitivo");
-        //casting implicito
+        
+        //casting implicito.
         Integer numero2 = numero;
         System.out.println("Este numero "+numero2+" esta numa variavel do tipo Wrapper");
         

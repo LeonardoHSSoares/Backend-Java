@@ -13,7 +13,7 @@ public class CastingExplicito {
 
         System.out.println("Este numero "+numero+" esta numa variavel do tipo primitivo");
 
-        //casting explícito
+        //casting explícito.
         Integer numero2 = (int) numero;
         System.out.println("Este numero "+numero2+" esta numa variavel do tipo Wrapper");
     }

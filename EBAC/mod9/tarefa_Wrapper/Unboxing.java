@@ -14,7 +14,7 @@ public class Unboxing {
         
         System.out.println("Este numero "+numero+" esta guardado numa variavel tipo Wrapper");
 
-        //casting implicito
+        //casting implicito.
         int numero2 = numero;
         System.out.println("Este numero "+numero2+" esta guardado numa variavel tipo primitivo");
 
