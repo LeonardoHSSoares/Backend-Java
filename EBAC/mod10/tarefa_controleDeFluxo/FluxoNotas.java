@@ -1,25 +1,15 @@
-package EBAC.mod8.tarefaCalculoMedia;
+package EBAC.mod10.tarefa_controleDeFluxo;
 
 import java.util.Scanner;
 
-/**
- * @author Leonardo
- * 
- */
-public class CalculaMedia2{
+public class FluxoNotas {
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        
-        calculaMedia();
 
-    }
-
-    public static void calculaMedia() {
-        
-        double[] notas = new double[3];
+        double[] notas = new double[4];
         int cont = 1;
 
         Scanner leia = new Scanner(System.in);
@@ -32,9 +22,10 @@ public class CalculaMedia2{
             desenhaLinha();
             cont++;
         }
-
         leia.close();
+        System.out.print("\033[H\033[2J");
         geraRelatorio(notas);
+
     }
 
     public static void desenhaLinha() {
@@ -46,14 +37,24 @@ public class CalculaMedia2{
 
     public static void geraRelatorio(double[] notas) {
         double soma = 0;
+        double media = 0;
 
         for (double nota : notas) {
             soma += nota;
+
+            media = soma / notas.length;
+
         }
+        if (media >= 7) {
+            System.out.println("Aluno APROVADO!");
+            System.out.println("Média Aritmetica: " + media);
+        } else if (media < 7 && media >= 5) {
+            System.out.println("Aluno de RECUPERAÇÃO!");
+            System.out.println("Média Aritmetica: " + media);
+        } else {
+            System.out.println("Aluno de REPROVADO!");
+            System.out.println("Média Aritmetica: " + media);
 
-        double media = soma / notas.length;
-
-        System.out.println("A Média Aritmética ficou em: " + media);
+        }
     }
 }
-
