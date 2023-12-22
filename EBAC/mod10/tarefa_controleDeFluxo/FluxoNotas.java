@@ -46,14 +46,23 @@ public class FluxoNotas {
 
         }
         if (media >= 7) {
+            desenhaLinha();
             System.out.println("Aluno APROVADO!");
+            desenhaLinha();
             System.out.println("Média Aritmetica: " + media);
+            desenhaLinha();
         } else if (media < 7 && media >= 5) {
+            desenhaLinha();
             System.out.println("Aluno de RECUPERAÇÃO!");
+            desenhaLinha();
             System.out.println("Média Aritmetica: " + media);
+            desenhaLinha();
         } else {
+            desenhaLinha();
             System.out.println("Aluno de REPROVADO!");
+            desenhaLinha();
             System.out.println("Média Aritmetica: " + media);
+            desenhaLinha();
 
         }
     }
