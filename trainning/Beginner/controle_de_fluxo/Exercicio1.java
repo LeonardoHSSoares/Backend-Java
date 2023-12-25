@@ -22,8 +22,8 @@ public class Exercicio1 {
         System.out.println("Digite um numero inteiro: ");
         desenhaLinha();
         int iNum = leia.nextInt();
-        leia.close();
         System.out.print("\033[H\033[2J");
+        leia.close();
 
         verificaPar(iNum);
         verificaImpar(iNum);
