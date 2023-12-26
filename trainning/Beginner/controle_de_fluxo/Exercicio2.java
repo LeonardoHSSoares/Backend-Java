@@ -36,7 +36,7 @@ public class Exercicio2 {
             System.out.println(i+" PAR! mas nao divisivel por 3");
             desenhaLinha();
         }
-        else if (i % 2 != 0 && i % 3 == 0) {
+        else if (i % 2 != 0 &&  i % 3 == 0) {
             desenhaLinha();
             System.out.println(i+" NÃO é par mas é divisivel por 3");
             desenhaLinha();
