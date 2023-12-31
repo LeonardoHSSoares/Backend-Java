@@ -1,93 +1,89 @@
 package EBAC.mod11.tarefa_colecoes.part2;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class SeparandoGenero {
 
     private List<String> nomes;
-    private List<String> generos;
-    private Integer qntdHomem;
-    private Integer qntdMulher;
-    private int[] nome;
-
-    public Integer getQntdHomem() {
-        return qntdHomem;
-    }
-
-    public void setQntdHomem(Integer qntdHomem) {
-        this.qntdHomem = qntdHomem;
-    }
-
-    public Integer getQntdMulher() {
-        return qntdMulher;
-    }
-
-    public void setQntdMulher(Integer qntdMulher) {
-        this.qntdMulher = qntdMulher;
-    }
-
+    private Character[] generos;
+    private List<String> nomesHomens;
+    private List<String> nomesMulheres;
+    int totalHomens = 0;
+    int totalMulheres = 0;
+    
     public SeparandoGenero() {
         nomes = new ArrayList<>();
         generos = new ArrayList<>();
+        nomesHomens = new ArrayList<>();
+        nomesMulheres = new ArrayList<>();
+    
     }
 
     public void coletaNome() {
         System.out.println("Digite o nome e o gênero separados por '-': ");
-
+        Scanner leia = new Scanner(System.in);
+        
         while (true) {
-            Scanner leia = new Scanner(System.in);
 
-            String entrada = leia.nextLine();
-            String[] arrayNomes = entrada.split("-");
-
-            for (String nome : nomes) {
-                nome = arrayNomes[0];
-                nomes.add(nome);
+        String entrada = leia.nextLine();
+        String[] arrayNomes = entrada.split("-");
+            if (entrada.equalsIgnoreCase("sair")) {
+                System.out.println("Programa Finalizado!");
+                break;
+            }else{
+            nomes.add(arrayNomes[0]);
+            generos.add(arrayNomes[1]);
+            divideGenero(arrayNomes[1]);
             }
-
-                if (arrayNomes[1].equalsIgnoreCase("m")) {
-                    int total = getQntdHomem();
-                    total++;
-                    setQntdHomem(total);
-                } else if (arrayNomes[1].equalsIgnoreCase("f")) {
-                    int total = getQntdMulher();
-                    total++;
-                    setQntdMulher(total);
-                }
         }
     }
 
-    public void exibeNomes() {
+    public void exibeNomes(String genero) {
         System.out.println("Nomes:");
+        for(String nome : nomes) {
+            System.out.println(nome+"\t\t"+genero);
+            
+        }
+    }
+
+    public void exibeQntidadePessoas() {
+        System.out.println("Total de pessoas cadastradas: " + (totalHomens + totalMulheres));
+        System.out.println("Total de Homens cadastrados: " + totalHomens);
+        System.out.println("Total de Mulheres cadastradas: " + totalMulheres);
+    }
+
+    public void divideGenero(String genero) {
+        if (genero.equalsIgnoreCase("m")) {
+
+        } else if (genero.equalsIgnoreCase("f")) {
+            
+        }
+    }
+    public void imprimeTabela() {
+        System.out.println("Tabela de Homens:");
+        imprimeTabelaIndividual(nomesHomens, "Masculino");
+        System.out.println("\nTabela de Mulheres:");
+        imprimeTabelaIndividual(nomesMulheres, "Feminino");
+    }
+
+    private void imprimeTabelaIndividual(List<String> nomes, String genero) {
+        System.out.println("---------------------------------");
+        System.out.printf("%-20s | Gênero\n", "Nome");
+        System.out.println("---------------------------------");
         for (String nome : nomes) {
-            System.out.println(nome);
+            System.out.printf("%-20s | %s\n", nome, genero);
         }
-    }
-
-    public void exibeGeneros() {
-        System.out.println("Gêneros:");
-        for (String genero : generos) {
-            System.out.println(genero);
-        }
-
-        int total = getQntdHomem() + getQntdMulher();
-        System.out.println("Total de pessoas cadastradas: " + total);
-        System.out.println("Total de Homens cadastrados: " + getQntdHomem());
-        System.out.println("Total de Mulheres cadastradas: " + getQntdMulher());
-    }
-
-    public void divideGenero() {
-
+        System.out.println("---------------------------------");
     }
 
     public static void main(String[] args) {
         SeparandoGenero objPrincipal = new SeparandoGenero();
-
+        
         objPrincipal.coletaNome();
-        objPrincipal.exibeNomes();
-        objPrincipal.exibeGeneros();
-
+        objPrincipal.exibeNomes("");
+        objPrincipal.exibeQntidadePessoas();
+        
     }
 }
