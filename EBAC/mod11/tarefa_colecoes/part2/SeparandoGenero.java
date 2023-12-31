@@ -7,44 +7,87 @@ import java.util.ArrayList;
 public class SeparandoGenero {
 
     private List<String> nomes;
-    private List<Character> generos;
+    private List<String> generos;
+    private Integer qntdHomem;
+    private Integer qntdMulher;
+    private int[] nome;
+
+    public Integer getQntdHomem() {
+        return qntdHomem;
+    }
+
+    public void setQntdHomem(Integer qntdHomem) {
+        this.qntdHomem = qntdHomem;
+    }
+
+    public Integer getQntdMulher() {
+        return qntdMulher;
+    }
+
+    public void setQntdMulher(Integer qntdMulher) {
+        this.qntdMulher = qntdMulher;
+    }
 
     public SeparandoGenero() {
         nomes = new ArrayList<>();
         generos = new ArrayList<>();
     }
-    public SeparandoGenero(String[] nomes,String[] generos) {
-        this.nomes = nomes;
-    }
-    
-    public void coletaNome() {
-        Scanner leia = new Scanner(System.in);
 
-        System.out.println("Digite o nome");
-        String nome = leia.nextLine();
-        String[] arrayNomes = nome.split(",");
-        String primeiroNome = arrayNomes[0];
-        String segundoNome = arrayNomes[1];
-        
-        System.out.println(primeiroNome);
-        System.out.println(segundoNome);
+    public void coletaNome() {
+        System.out.println("Digite o nome e o gênero separados por '-': ");
+
+        while (true) {
+            Scanner leia = new Scanner(System.in);
+
+            String entrada = leia.nextLine();
+            String[] arrayNomes = entrada.split("-");
+
+            for (String nome : nomes) {
+                nome = arrayNomes[0];
+                nomes.add(nome);
+            }
+
+                if (arrayNomes[1].equalsIgnoreCase("m")) {
+                    int total = getQntdHomem();
+                    total++;
+                    setQntdHomem(total);
+                } else if (arrayNomes[1].equalsIgnoreCase("f")) {
+                    int total = getQntdMulher();
+                    total++;
+                    setQntdMulher(total);
+                }
+        }
     }
+
     public void exibeNomes() {
-        for(String nome : nomes){
+        System.out.println("Nomes:");
+        for (String nome : nomes) {
             System.out.println(nome);
         }
     }
+
     public void exibeGeneros() {
-        for(Character genero : generos) {
+        System.out.println("Gêneros:");
+        for (String genero : generos) {
             System.out.println(genero);
         }
+
+        int total = getQntdHomem() + getQntdMulher();
+        System.out.println("Total de pessoas cadastradas: " + total);
+        System.out.println("Total de Homens cadastrados: " + getQntdHomem());
+        System.out.println("Total de Mulheres cadastradas: " + getQntdMulher());
     }
-    
+
+    public void divideGenero() {
+
+    }
+
     public static void main(String[] args) {
-        SeparandoGenero objMain = new SeparandoGenero();
-        
-        objMain.coletaNome();
-        objMain.exibeNomes();
-        
+        SeparandoGenero objPrincipal = new SeparandoGenero();
+
+        objPrincipal.coletaNome();
+        objPrincipal.exibeNomes();
+        objPrincipal.exibeGeneros();
+
     }
 }
