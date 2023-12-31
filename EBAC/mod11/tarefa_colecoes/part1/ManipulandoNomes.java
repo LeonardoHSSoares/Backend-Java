@@ -16,6 +16,7 @@ public class ManipulandoNomes {
     public static void main(String[] args) {
 
         ManipulandoNomes ordenaNomes = new ManipulandoNomes();
+        System.out.print("\033[H\033[2J");
         desenhaLinha();
         System.out.print("Digite um nome para adiciona-lo à lista ou\n");
         System.out.println("Digite 'sair' para finalizar e imprimir a lista nomes: ");
@@ -25,8 +26,8 @@ public class ManipulandoNomes {
         System.out.println("Nomes adicionados antes da ordenação");
         ordenaNomes.exibeNomes();
         desenhaLinha();
+        
         ordenaNomes.ordenaNomes();
-        desenhaLinha();
         System.out.println("Nomes adicionados depois da ordenação");
         ordenaNomes.exibeNomes();
         desenhaLinha();
@@ -37,14 +38,15 @@ public class ManipulandoNomes {
         int contador = 1;
         while(true) {
             
+            System.out.println(String.format("Digite o %sº Nome:", contador));
             String nome = leia.nextLine();
-            System.out.println("Digite o proximo nome da lista: ");
             if (nome.equalsIgnoreCase("sair")) {
-                exibeNomes();
+                System.out.print("\033[H\033[2J");
+                desenhaLinha();
+                System.out.println("Sistema encerrado!");
                 break;
             }
-            
-            contador++
+            contador++;
             nomes.add(nome);
         }
     }

@@ -10,7 +10,6 @@ public class ExeInterpolacao {
 
     public static void main(String[] args) {
 
-        advanced("Leonardo");
 
     }
 
@@ -56,13 +55,14 @@ public class ExeInterpolacao {
     }
 
     //Se estiver usando Java 15 ou superior, você pode aproveitar os Text Blocks para criar strings multilinhas, o que pode tornar a concatenação de strings mais legível, especialmente para strings grandes e complexas. No entanto, ainda não é uma interpolação de string no sentido tradicional.
-    public static void nivel5(String nome) {
+    
+    /*public static void nivel5(String nome) {
         
         String mensagem = """
         Olá, %s! Bem-vindo ao programa.
         """.formatted(nome);
         System.out.println(mensagem);
 
-    }
+    }*/
 
 }
