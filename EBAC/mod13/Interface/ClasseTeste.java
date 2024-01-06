@@ -14,6 +14,14 @@ public class ClasseTeste {
         ICaneta lapis = new Lapis();
         lapis.escrever("Ola Mundo!");
         System.out.println(lapis.getCor());
+
+        ICarro carroPasseio = new CarroPasseio();
+        carroPasseio.andar();
+        carroPasseio.parar();
+
+        ICarro caminhao = new Caminhao();
+        caminhao.andar();
+        caminhao.parar();
     }
 
 }
