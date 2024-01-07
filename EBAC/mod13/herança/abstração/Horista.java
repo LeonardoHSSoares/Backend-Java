@@ -1,4 +1,4 @@
-package EBAC.mod13.abstração;
+package EBAC.mod13.herança.abstração;
 
 /**
  * Classe concreta Horista que extende a classe abstrata Empregado

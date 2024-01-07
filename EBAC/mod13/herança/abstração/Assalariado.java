@@ -1,4 +1,4 @@
-package EBAC.mod13.abstração;
+package EBAC.mod13.herança.abstração;
 
 /**
  * Classe concreta Assalariado que extende a classe abstrata Empregado
