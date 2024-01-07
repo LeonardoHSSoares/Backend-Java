@@ -19,8 +19,21 @@ public abstract class Empregado {
         return cpf;
     }
 
-    public Double vencimento() {
-        
+    public void setNome(String nome) {
+        this.nome = nome;
     }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+    
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Double vencimento() {
+        return null;
+    }
+
 
 }

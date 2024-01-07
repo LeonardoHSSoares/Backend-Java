@@ -1,6 +1,6 @@
 package EBAC.mod13.Interface;
 
-public class ClasseTeste {
+public class ClasseTesteInterfaces {
     
     public static void main(String args[]) {
         ICaneta caneta = new CanetaEsferografica();
