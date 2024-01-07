@@ -1,4 +1,4 @@
-package EBAC.mod13.herança.abstração;
+package EBAC.mod13.herança_abstração;
 
 public class ClasseTesteAbstracao extends Empregado{
     public static void main(String args[]) {
