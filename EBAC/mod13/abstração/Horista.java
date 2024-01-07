@@ -12,8 +12,18 @@ public class Horista extends Empregado{
         return precoHora*horasTrabalhadas;
     }
 
-    public Double getprecoHora() {
+    public Double getPrecoHora() {
         return precoHora;
     }
     
+    public Double getHorasTrabalhadas() {
+        return horasTrabalhadas;
+    }
+
+    public void setPrecoHora(Double precoHora) {
+        this.precoHora = precoHora;
+    }
+    public void setHorasTrabalhadas(Double horasTrabalhadas) {
+        this.horasTrabalhadas = horasTrabalhadas;
+    }
 }

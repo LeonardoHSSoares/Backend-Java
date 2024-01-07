@@ -11,4 +11,18 @@ public class Comissionado extends Empregado{
     public Double vencimento() {
         return totalVenda*taxaComissao;
     }
+    
+    public Double getTotalVendas() {
+        return totalVenda;
+    } 
+
+    public Double getTaxaComissao() {
+        return taxaComissao;
+    }
+    public void setTotalVenda(Double totalVenda) {
+        this.totalVenda = totalVenda;
+    }
+    public void setTaxaComissao(Double taxaComissao) {
+        this.taxaComissao = taxaComissao;
+    }
 }
