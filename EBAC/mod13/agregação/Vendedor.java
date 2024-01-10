@@ -7,5 +7,8 @@ public class Vendedor {
     public Float getComissao() {
         return comissao;
     }
+    public void setComissao(Float comissao) {
+        this.comissao = comissao;
+    }
 
 }
