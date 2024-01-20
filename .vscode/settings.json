@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "trainning/Junior/CadastroCliente/CadastroCliente/src",
+        "trainning/Junior/CadastroCliente/src",
         "EBAC/mod14/projeto1/src",
-        "trainning/Junior/CadastroCliente/src"
+        "EBAC/mod15/tarefa_design-patterns_projeto1"
     ]
 }
