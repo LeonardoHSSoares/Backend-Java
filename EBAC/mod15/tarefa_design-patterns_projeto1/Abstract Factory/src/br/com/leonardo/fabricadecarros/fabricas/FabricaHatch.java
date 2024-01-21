@@ -1,15 +1,12 @@
 package br.com.leonardo.fabricadecarros.fabricas;
 
+import br.com.leonardo.fabricadecarros.carros.Hatch;
 import br.com.leonardo.fabricadecarros.carros.ICarro;
-import br.com.leonardo.fabricadecarros.carros.SUV;
 
-public class FabricaSUV implements IFabricaDeCarros{
+public class FabricaHatch implements IFabricaDeCarros{
 
-    @Override
     public ICarro criarCarro(String modelo, int ano, String combustivel) {
-        return new SUV(modelo, ano,combustivel);
+        return new Hatch(modelo, ano, combustivel);
     }
-
-    
     
 }
