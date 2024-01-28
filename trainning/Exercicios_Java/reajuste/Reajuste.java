@@ -1,12 +1,14 @@
+package reajuste;
 /*
  * Informar um saldo e imprimir o saldo com reajuste de 1%.
  */
-package reajuste;
+
 
 import java.util.Scanner;
 
 public class Reajuste {
-    private Integer saldo = 0;
+    
+    private Integer saldo;
 
     public static void main(String[] args) {
         Reajuste salario1 = new Reajuste(null);
