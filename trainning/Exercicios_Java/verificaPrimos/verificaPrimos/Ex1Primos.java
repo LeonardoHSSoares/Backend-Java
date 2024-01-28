@@ -1,3 +1,4 @@
+package verificaPrimos;
 import java.util.Scanner;
 
 public class Ex1Primos {
