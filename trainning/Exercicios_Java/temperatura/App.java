@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 import domain.Fahrenheit;
+import domain.Kelvin;
+import domain.Rankine;
+import domain.Reaumur;
 import domain.TempContext;
 
 public class App {
@@ -13,8 +16,15 @@ public class App {
     leia.close();
 
     TempContext conversorFahrenheit = new TempContext(new Fahrenheit());
+    TempContext conversorKelvin = new TempContext(new Kelvin());
+    TempContext conversorReaumur = new TempContext(new Reaumur());
+    TempContext conversorRankine = new TempContext(new Rankine());
 
-    System.out.println("Convertido para Fahrenheit fica:"+conversorFahrenheit.executaConversor(celsius));
+
+    System.out.println("Conversão para Fahrenheit: "+conversorFahrenheit.executaConversor(celsius));
+    System.out.println("Conversão para Kelvin: "+conversorKelvin.executaConversor(celsius));
+    System.out.println("Conversão para Reaumur: "+conversorReaumur.executaConversor(celsius));
+    System.out.println("Conversão para Rankine: "+conversorRankine.executaConversor(celsius));
     
         
     }
