@@ -6,28 +6,49 @@ import java.util.Scanner;
 
 public class Exercicio {
 
-    private Integer numero;
+    private Integer numero = 0;
+    private Integer antecessor = 0;
+    private Integer sucessor = 0;
+
+    public Integer getAntecessor() {
+        return antecessor;
+    }
+
+    public void setAntecessor(Integer antecessor) {
+        this.antecessor = calculaAntecessor(numero);
+    }
+
+    public Integer getSucessor() {
+        return sucessor;
+    }
+
+    public void setSucessor(Integer sucessor) {
+        this.sucessor = calculaSucessor(numero);
+    }
 
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
-        Exercicio cliente = new Exercicio(null);
+        
 
         System.out.println("Digite um numero para saber seu sucessor e antecessor: ");
 
-        cliente.setNumero(leia.nextInt());
+        Exercicio cliente = new Exercicio(leia.nextInt());
         leia.close();
-        
-        Integer antecessor = cliente.calculaAntecessor(cliente.getNumero());
-        Integer sucessor = cliente.calculaSucessor(cliente.getNumero());
 
-        System.out.println("Antecessor: "+ antecessor);
-        System.out.println("Numero Digitado: "+ cliente.getNumero());
-        System.out.println("Sucessor: "+ sucessor);
+        System.out.println(cliente.toString());
+
 
     }
 
     public Exercicio(Integer numero) {
+        this.antecessor = calculaAntecessor(numero);
         this.numero = numero;
+        this.sucessor = calculaSucessor(numero);
+    }
+
+    @Override
+    public String toString() {
+        return "[antecessor= "+ antecessor + "]"+"[numero=" + numero + "]"+"[sucessor=" + sucessor + "]";
     }
 
     public Integer getNumero() {
@@ -40,11 +61,11 @@ public class Exercicio {
 
     public Integer calculaAntecessor(Integer numero) {
         
-        return numero-1;
+        return numero--;
     }
 
     public Integer calculaSucessor(Integer numero) {
-        return numero+1;
+        return numero++;
     }
 
 }

@@ -46,11 +46,6 @@ public class Ex1Primos {
     }
     return true;
    }
-   public void informarPrimo() {
-    if (isPrimo()) {
-        System.out.println(numero + " é um número primo.");
-    } else {
-        System.out.println(numero + " não é um número primo.");
-    }
-}
+  
+
 }
