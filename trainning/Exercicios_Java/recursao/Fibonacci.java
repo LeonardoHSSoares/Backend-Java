@@ -6,7 +6,7 @@ public class Fibonacci {
         return encontrarElemento(n-1)+encontrarElemento(n-2);
     }
     public static void main(String[] args) {
-        int n = 10;
+        int n = 3;
 
         System.out.println("Elemento "+n+": "+encontrarElemento(n));
     }
