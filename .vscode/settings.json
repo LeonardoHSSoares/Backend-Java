@@ -1,10 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "trainning/Junior/CadastroCliente/src",
-        "trainning/Exercicios_Java/verificaPrimos",
-        "EBAC/mod16",
-        "EBAC/mod15/tarefa_design-patterns_projeto1",
-        "EBAC/mod14/projeto1/src",
-        "trainning/Exercicios_Java/exercicioArray"
+        "EBAC/mod17/tarefa-mod17",
+        "trainning/Exercicios_Java/teste-carro-generic"
     ]
 }
