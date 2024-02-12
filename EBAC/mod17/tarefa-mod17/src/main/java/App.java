@@ -16,7 +16,7 @@ public class App {
             List<Marca<String>> fabricas = new ArrayList<>();
 
             while (true) {
-                System.out.println("Digite a marca do carro (Fiat, Ford ou Volkswagen)");
+                System.out.println("Digite a marca do carro (Fiat, Ford, Volkswagen, Renault: )");
                 System.out.println("digite 'sair' para encerrar: ");
                 String marca = scanner.nextLine();
                 if (marca.equalsIgnoreCase("sair")) {
