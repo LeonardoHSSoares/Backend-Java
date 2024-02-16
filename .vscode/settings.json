@@ -1,6 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "EBAC/mod17/tarefa-mod17",
-        "trainning/Exercicios_Java/teste-carro-generic"
+        "exercicio-herança"
     ]
 }
