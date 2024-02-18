@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "exercicio-herança"
+        "exercicio-herança",
+        "trainning/Exercicios_Java/buscaRapida"
     ]
 }
