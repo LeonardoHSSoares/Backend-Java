@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ExemploList {
     public static void main(String[] args) {
-       List<String> lista = new ArrayList<>();
+       List<String> lista = new ArrayList<String>();
 
        lista.add("Leonardo");
        lista.add("Veronica");
