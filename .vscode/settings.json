@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "EBAC/mod18/annotations"
+        "EBAC/mod18/annotations",
+        "EBAC/mod19"
     ],
     "java.project.referencedLibraries": []
 }
