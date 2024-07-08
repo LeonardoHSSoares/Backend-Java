@@ -1,0 +1,22 @@
+    Expressões lambdas, introduzidas a partir do Java 8, são funções anônimas onde se abstrai o nome da função. Em seu escopo, é necessário ter uma interface funcional, que é uma interface que possui exatamente um método abstrato, além de poder ter métodos padrão (default) e métodos estáticos.
+
+    O uso de lambdas precisa ser revisado cuidadosamente, pois existem desvantagens caso não haja necessidade de usá-las. Elas são utilizadas para tornar o código mais limpo e legível; no entanto, o uso excessivo pode ter o efeito contrário, dificultando a legibilidade do código.
+
+A sintaxe básica de uma expressão lambda é:
+(parametros) -> {expressão}
+
+Exemplo:
+Usando uma expressão lambda para implementar uma interface funcional
+
+    Runnable r = () -> System.out.println("Hello, world!");
+    r.run();
+
+    Adicionalmente, expressões lambdas podem capturar variáveis do escopo externo (variáveis locais ou parâmetros), desde que essas variáveis sejam efetivamente finais (ou seja, não sejam modificadas após serem atribuídas).
+
+Benefícios das expressões lambdas:
+
+    Redução de código boilerplate.
+    Maior expressividade.
+    Facilitação na criação de funções de ordem superior (funções que podem receber outras funções como argumentos ou retornar funções).
+
+No entanto, é importante usá-las com moderação para manter a clareza e a manutenção do código.
