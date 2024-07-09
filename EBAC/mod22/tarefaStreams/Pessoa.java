@@ -1,4 +1,3 @@
-import java.util.List;
 
 public class Pessoa implements IUsuario {
 
@@ -39,7 +38,7 @@ public class Pessoa implements IUsuario {
     public Pessoa coletaDados(String entrada) {
 
         if (entrada.split(",").length != 2) {   
-            break;
+            System.out.println("Nome Invalido!");
         } else {
 
             String[] entradaDividida = entrada.split(",");
@@ -47,6 +46,7 @@ public class Pessoa implements IUsuario {
             String genero = entradaDividida[1].equalsIgnoreCase("f") ? "Feminino" : "Masculino";
             return new Pessoa(nome, genero);
         }
+        return null;
     }
 
    

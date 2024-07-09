@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Stream;
@@ -28,13 +29,15 @@ public class Demo {
         System.out.print("\033[H\033[2J");
 
         System.out.println("Lista Total Pessoas");
-        Stream<Pessoa> listaStream = listaTotal.stream();
+        Stream<Pessoa> listaStream = listaTotal.stream()
+            .sorted(Comparator.comparing(Pessoa::getNome));
         listaStream.forEach(pessoa -> System.out.println(pessoa.toString()));
 
         System.out.println();
         System.out.println("Lista Mulheres");
         Stream<Pessoa> mulheres = listaTotal.stream()
-            .filter(pessoa -> pessoa.getGenero().equals("Feminino"));
+            .filter(pessoa -> pessoa.getGenero().equals("Feminino"))
+            .sorted(Comparator.comparing(Pessoa::getNome));
         mulheres.forEach(pessoa -> System.out.println(pessoa.toString())
         );
 
