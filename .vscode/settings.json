@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "EBAC\\mod21"
+        "EBAC/mod22/Streams",
+        "EBAC/mod22/tarefaStreams"
     ],
     "java.project.referencedLibraries": []
 }

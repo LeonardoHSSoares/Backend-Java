@@ -1,11 +1,10 @@
-package Streams;
-
 import java.util.List;
 
 public class Pessoa implements IUsuario {
 
     String nome;
     String genero;
+
 
     public Pessoa() {
     }
@@ -33,25 +32,23 @@ public class Pessoa implements IUsuario {
 
     @Override
     public String toString() {
-        return "Pessoa [ Nome = " + nome + ", Genero = " + genero + "]";
+        return Pessoa.class.getSimpleName()+" [Nome= " + nome + ", Genero= " + genero + "]";
     }
 
     @Override
     public Pessoa coletaDados(String entrada) {
 
-        if (entrada.split(",").length != 2) {
-            throw new UnsupportedOperationException("Entrada invalida, nome ignorado!");
+        if (entrada.split(",").length != 2) {   
+            break;
         } else {
+
             String[] entradaDividida = entrada.split(",");
-            String genero = entradaDividida[1].trim().equalsIgnoreCase("f") ? "Feminino" : "Masculino";
-            String nome = entradaDividida[0].trim();
+            String nome = entradaDividida[0].toUpperCase();
+            String genero = entradaDividida[1].equalsIgnoreCase("f") ? "Feminino" : "Masculino";
             return new Pessoa(nome, genero);
         }
     }
 
-    @Override
-    public List<Pessoa> listaTotalPessoas() {
-        throw new UnsupportedOperationException("Unimplemented method 'listaTotalPessoas'");
-    }
-
+   
+ 
 }
