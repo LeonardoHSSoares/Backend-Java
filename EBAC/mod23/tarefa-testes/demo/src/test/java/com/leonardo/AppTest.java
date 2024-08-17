@@ -25,11 +25,11 @@ public class AppTest {
                 .filter(pessoa -> pessoa.getGenero().equals("Feminino"))
                 .collect(Collectors.toList());
 
-        // Verificando se todas as pessoas na lista de mulheres teem ogeeneroffeminino
+        // Verificando se todas as pessoas na lista de mulheres tem o genero feminino
         boolean todasSaoFeminino = mulheres.stream()
                 .allMatch(pessoa -> pessoa.getGenero().equals("Feminino"));
 
-        // certificandoo que todas são do eeneroffeminino
+        // certificandoo que todas são do genero feminino
         assertTrue(todasSaoFeminino, "A lista de mulheres contém apenas pessoas do gênero Feminino.");
     }
 }
