@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "src.main.java.com.examplestream.Main",
+            "projectName": "Backend-Java_671b6614"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Main",
             "projectName": "Backend-Java_671b6614"
         },

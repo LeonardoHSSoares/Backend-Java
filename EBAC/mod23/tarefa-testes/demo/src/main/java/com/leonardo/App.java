@@ -1,10 +1,13 @@
+package com.leonardo;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class Demo {
+public class App {
+
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         IUsuario usuario = new Pessoa();
@@ -40,6 +43,5 @@ public class Demo {
             .sorted(Comparator.comparing(Pessoa::getNome));
         mulheres.forEach(pessoa -> System.out.println(pessoa.toString())
         );        
-        
     }
 }

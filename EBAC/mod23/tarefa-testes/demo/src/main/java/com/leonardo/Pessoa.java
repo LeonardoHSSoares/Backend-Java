@@ -1,5 +1,6 @@
+package com.leonardo;
 
-public class Pessoa implements IUsuario {
+public class Pessoa implements IUsuario{
 
     String nome;
     String genero;
@@ -50,5 +51,4 @@ public class Pessoa implements IUsuario {
     }
 
    
- 
 }
