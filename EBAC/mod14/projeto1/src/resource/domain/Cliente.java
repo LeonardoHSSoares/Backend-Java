@@ -1,7 +1,7 @@
 package resource.domain;
 
 public class Cliente {
-
+    
     private String nome;
     private Long cpf;
     private Long tel;
