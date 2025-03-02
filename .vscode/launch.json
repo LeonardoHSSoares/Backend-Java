@@ -6,6 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringPermutations",
+            "request": "launch",
+            "mainClass": "StringPermutations"
+        },
+        {
+            "type": "java",
+            "name": "Nrainhas",
+            "request": "launch",
+            "mainClass": "Nrainhas"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main"
