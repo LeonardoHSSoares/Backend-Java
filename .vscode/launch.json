@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CaminhosMatriz",
+            "request": "launch",
+            "mainClass": "CaminhosMatriz"
+        },
+        {
+            "type": "java",
             "name": "StringPermutations",
             "request": "launch",
             "mainClass": "StringPermutations"
