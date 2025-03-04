@@ -1,3 +1,7 @@
+/*
+ * O primeiro exercício requer calcular todos os subconjuntos de n elementos de um conjunto dado.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
