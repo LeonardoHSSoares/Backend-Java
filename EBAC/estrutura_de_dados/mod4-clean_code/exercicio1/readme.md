@@ -1,4 +1,5 @@
-1. Por que código limpo é importante?
+
+Por que código limpo é importante?
 
 Pensa assim: código é como um texto. Se o texto é confuso, cheio de erros e difícil de entender, ninguém vai querer ler, certo? Com código é a mesma coisa! Se o código tá bagunçado, ninguém (nem você mesmo daqui a alguns meses) vai entender o que tá acontecendo ali.
 
