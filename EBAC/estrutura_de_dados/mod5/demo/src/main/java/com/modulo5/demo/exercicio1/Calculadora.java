@@ -33,5 +33,6 @@ class Calculadora {
             throw new ArithmeticException("Divisão por zero não permitida");
         }
         return a / b;
+        
     }
 }
