@@ -7,9 +7,8 @@ Os contêineres são uma forma de empacotar e isolar aplicações junto com suas
 Os microservices, por outro lado, são uma abordagem arquitetural para desenvolver sistemas como um conjunto de pequenos serviços independentes, cada um responsável por uma funcionalidade específica. Cada microservice pode ser desenvolvido, implantado e escalado separadamente.
 
 Pergunta Extra: É possível subir microservices em uma máquina virtual?
-Sim, é possível executar microservices em máquinas virtuais (VMs). No entanto, o uso de contêineres oferece benefícios significativos, como menor consumo de recursos, inicialização mais rápida e melhor escalabilidade. Máquinas virtuais criam um ambiente mais pesado, pois cada VM executa um sistema operacional completo, enquanto contêineres compartilham o kernel do host, tornando a execução mais eficiente.
 
-Pergunta extra: É possível subir microservices em uma máquina virtual? Justifique sua resposta.
+Sim, é possível executar microservices em máquinas virtuais (VMs). No entanto, o uso de contêineres oferece benefícios significativos, como menor consumo de recursos, inicialização mais rápida e melhor escalabilidade. Máquinas virtuais criam um ambiente mais pesado, pois cada VM executa um sistema operacional completo, enquanto contêineres compartilham o kernel do host, tornando a execução mais eficiente.
 
 
 2 - Integração Contínua:
