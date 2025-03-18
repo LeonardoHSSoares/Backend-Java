@@ -1,22 +1,22 @@
-### Exercício 1: Os 12 Fatores no Desenvolvimento de Microservices
+# Exercício 1: Os 12 Fatores no Desenvolvimento de Microservices
 
 ## Fatores Selecionados:
 
-# Configurações
+### Configurações
 
 No desenvolvimento de microserviços, a configuração deve ser separada do código-fonte e gerenciada por variáveis de ambiente. Isso garante que o mesmo binário possa ser executado em diferentes ambientes sem modificações no código, aumentando a portabilidade e a segurança. Em uma arquitetura monolítica, configurações costumam estar embutidas no próprio sistema, tornando mais difícil a adaptação entre ambientes.
 
-# Concorrência
+### Concorrência
 
 Microserviços devem ser projetados para serem escaláveis horizontalmente, utilizando múltiplas instâncias para atender demandas crescentes. O uso de processos concorrentes permite que diferentes partes da aplicação rodem independentemente, otimizando a performance. Em contrapartida, sistemas monolíticos costumam ter maior dependência entre componentes, dificultando a escalabilidade e a concorrência eficiente.
 
-# Logs
+### Logs
 
 O registro de logs deve ser tratado como um fluxo de eventos, direcionado para ferramentas externas de análise e monitoramento. Isso permite que problemas sejam identificados e resolvidos rapidamente, sem depender de armazenamento local. No modelo monolítico, logs geralmente são armazenados localmente ou em arquivos específicos do servidor, o que pode dificultar a coleta e análise centralizada de dados.
 
-Comparativo entre Arquiteturas
+## Comparativo entre Arquiteturas
 
-Monolítica:
+### Monolítica:
 
 - Configurações acopladas ao código.
 
@@ -24,7 +24,7 @@ Monolítica:
 
 - Logs armazenados localmente, dificultando análise distribuída.
 
-Microserviços:
+### Microserviços:
 
 - Configurações gerenciadas externamente via variáveis de ambiente.
 
@@ -32,7 +32,7 @@ Microserviços:
 
 - Logs coletados e processados externamente.
 
-### Exercício 2: CI/CD e Serviços Stateless
+# Exercício 2: CI/CD e Serviços Stateless
 
 * Microserviços devem ser projetados como stateless (sem estado) para facilitar sua escalabilidade, resiliência e integração com pipelines de CI/CD. Isso significa que um serviço não deve armazenar informações críticas na memória ou no disco local, mas sim em repositórios externos, como bancos de dados ou sistemas de cache distribuído.
 
