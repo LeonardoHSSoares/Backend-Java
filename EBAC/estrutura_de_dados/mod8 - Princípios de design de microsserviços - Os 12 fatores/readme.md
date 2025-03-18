@@ -34,7 +34,7 @@ Microserviços:
 
 ### Exercício 2: CI/CD e Serviços Stateless
 
-Microserviços devem ser projetados como stateless (sem estado) para facilitar sua escalabilidade, resiliência e integração com pipelines de CI/CD. Isso significa que um serviço não deve armazenar informações críticas na memória ou no disco local, mas sim em repositórios externos, como bancos de dados ou sistemas de cache distribuído.
+* Microserviços devem ser projetados como stateless (sem estado) para facilitar sua escalabilidade, resiliência e integração com pipelines de CI/CD. Isso significa que um serviço não deve armazenar informações críticas na memória ou no disco local, mas sim em repositórios externos, como bancos de dados ou sistemas de cache distribuído.
 
 ## Importância para CI/CD:
 
