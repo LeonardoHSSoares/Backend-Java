@@ -1,9 +1,15 @@
 package main.java;
 
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
+
+@
 public class Produto {
     
     public Produto(){
     }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private Double preco;
