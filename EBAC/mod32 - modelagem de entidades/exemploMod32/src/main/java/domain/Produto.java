@@ -1,5 +1,6 @@
 package main.java.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +20,10 @@ public class Produto {
     @SequenceGenerator(name = "produto_seq", sequenceName = "sq_produto", initialValue = 1, allocationSize = 1)
     private Long id;
 
-    @Collumn(name = "NOME", length = 100, nullable = false)
+    @Column(name = "NOME", length = 100, nullable = false)
     private String nome;
 
-    @Collumn(name = "PRECO" ,nullable = false)
+    @Column(name = "PRECO" ,nullable = false)
     private Double preco;
 
     public String getNome() {
