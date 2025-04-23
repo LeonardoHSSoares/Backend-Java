@@ -7,7 +7,7 @@
 		
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		
-		<!-- <class>br.com.rpires.domain.Cliente</class> -->
+		<class>main.java.domain.Produto</class>
 		
 		
 		<properties>
