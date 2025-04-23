@@ -54,11 +54,11 @@ public class ProdutoDao implements IProduto {
 		query.select(root);
 		
 		TypedQuery<Produto> tpQuery = entityManager.createQuery(query);
-		List<Produto> list = tpQuery.getResultList();  
+		List<Produto> list = tpQuery.getResultList();
 		
 		entityManager.close();
 		entityManagerFactory.close();
-        
+
 		return list;
     }
     
