@@ -1,0 +1,4 @@
+com\leonardo\domain\Produto.class
+com\leonardo\App.class
+com\leonardo\dao\ProdutoDAO.class
+com\leonardo\dao\IProdutoDAO.class
