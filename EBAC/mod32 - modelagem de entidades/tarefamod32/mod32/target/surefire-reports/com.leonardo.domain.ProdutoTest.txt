@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.leonardo.domain.ProdutoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.471 s - in com.leonardo.domain.ProdutoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.085 s - in com.leonardo.domain.ProdutoTest

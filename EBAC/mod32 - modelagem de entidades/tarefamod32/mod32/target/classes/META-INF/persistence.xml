@@ -16,7 +16,7 @@
             <property name="javax.persistence.jdbc.url"
                 value="jdbc:postgresql://localhost:5432/ebac" /> <!-- BD Mane -->
             <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
-            <property name="javax.persistence.jdbc.password" value="123456" /> <!-- DB Password -->
+            <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> <!--
             DB Dialect -->
