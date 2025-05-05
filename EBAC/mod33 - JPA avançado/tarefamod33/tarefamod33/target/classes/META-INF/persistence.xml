@@ -8,7 +8,10 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- <class>br.com.rpires.domain.Cliente</class> -->
-        <class>com.leonardo.domain.Produto</class>
+        <class>com.leonardo.domain.Carro</class>
+        <class>com.leonardo.domain.Marca</class>
+        <class>com.leonardo.domain.Veiculo</class>
+        <class>com.leonardo.domain.Acessorio</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB
