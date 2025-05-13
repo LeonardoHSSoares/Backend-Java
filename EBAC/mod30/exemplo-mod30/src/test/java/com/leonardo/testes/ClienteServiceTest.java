@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import com.leonardo.dao.IClienteDAO;
 import com.leonardo.domain.Cliente;
+import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.services.ClienteService;
 import com.leonardo.services.IClienteService;
@@ -36,25 +37,25 @@ public class ClienteServiceTest {
 	}
 	
 	@Test
-	public void pesquisarCliente() {
+	public void pesquisarCliente() throws DAOException {
 		Cliente clienteConsultado = clienteService.buscarPorCPF(cliente.getCpf());
 		Assert.assertNotNull(clienteConsultado);
 	}
 	
 	@Test
-	public void salvarCliente() throws TipoChaveNaoEncontradaException {
+	public void salvarCliente() throws TipoChaveNaoEncontradaException, DAOException {
 		Boolean retorno = clienteService.cadastrar(cliente);
 		
 		Assert.assertTrue(retorno);
 	}
 	
 	@Test
-	public void excluirCliente() {
+	public void excluirCliente() throws DAOException {
 		clienteService.excluir(cliente.getCpf());
 	}
 	
 	@Test
-	public void alterarCliente() throws TipoChaveNaoEncontradaException {
+	public void alterarCliente() throws TipoChaveNaoEncontradaException, DAOException {
 		cliente.setNome("Rodrigo Pires");
 		clienteService.alterar(cliente);
 		

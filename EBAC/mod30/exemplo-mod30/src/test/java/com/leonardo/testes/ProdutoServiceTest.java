@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import com.leonardo.dao.IProdutoDAO;
 import com.leonardo.domain.Produto;
+import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.services.IProdutoService;
 import com.leonardo.services.ProdutoService;
@@ -34,24 +35,24 @@ public class ProdutoServiceTest {
 	}
 	
 	@Test
-	public void pesquisar() {
+	public void pesquisar() throws DAOException {
 		Produto produtor = this.produtoService.consultar(produto.getCodigo());
 		Assert.assertNotNull(produtor);
 	}
 	
 	@Test
-	public void salvar() throws TipoChaveNaoEncontradaException {
+	public void salvar() throws TipoChaveNaoEncontradaException, DAOException {
 		Boolean retorno = produtoService.cadastrar(produto);
 		Assert.assertTrue(retorno);
 	}
 	
 	@Test
-	public void excluir() {
+	public void excluir() throws DAOException {
 		produtoService.excluir(produto.getCodigo());
 	}
 	
 	@Test
-	public void alterarCliente() throws TipoChaveNaoEncontradaException {
+	public void alterarCliente() throws TipoChaveNaoEncontradaException, DAOException {
 		produto.setNome("Rodrigo Pires");
 		produtoService.alterar(produto);
 		

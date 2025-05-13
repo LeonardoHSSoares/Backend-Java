@@ -38,7 +38,7 @@ public class Venda implements Persistente {
 	@ColunaTabela(dbName = "id_cliente_fk", setJavaName = "setIdClienteFk")
 	private Cliente cliente;
 
-	// @ColunaTabela(dbName = "id", setJavaName = "setId")
+	@ColunaTabela(dbName = "id", setJavaName = "setId")
 	private Set<ProdutoQuantidade> produtos;
 
 	@ColunaTabela(dbName = "valor_total", setJavaName = "setValorTotal")

@@ -11,7 +11,7 @@ public class ProdutoQuantidade {
 	@ColunaTabela(dbName = "id", setJavaName = "setId")
 	private Long id;
 
-	//@ColunaTabela(dbName = "id", setJavaName = "setId")
+	@ColunaTabela(dbName = "id", setJavaName = "setId")
 	private Produto produto;
 	
 	@ColunaTabela(dbName = "quantidade", setJavaName = "setQuantidade")
