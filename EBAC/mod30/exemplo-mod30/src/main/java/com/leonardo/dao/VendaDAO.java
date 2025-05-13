@@ -41,12 +41,10 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 			stm.setString(1, Status.CANCELADA.name());
 			stm.setLong(2, venda.getId());
 			stm.executeUpdate();
-
 		} catch (SQLException e) {
 			throw new DAOException("ERRO ATUALIZANDO OBJETO ", e);
 		} finally {
-			closeConnection(connection, stm, null);
+			closeConnection(connection, stm, null); // Agora o método está definido
 		}
 	}
-
 }
