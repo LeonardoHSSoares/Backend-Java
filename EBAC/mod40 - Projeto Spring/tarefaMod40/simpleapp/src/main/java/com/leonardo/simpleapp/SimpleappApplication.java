@@ -21,7 +21,6 @@ import com.leonardo.simpleapp.repository.IClienteRepository;
 @ComponentScan(basePackages = "com.leonardo.simpleapp")
 public class SimpleappApplication implements CommandLineRunner {
 
-	//static final Logger log = Logger.getLogger(SimpleappApplication.class.getName());
 	private static final Logger log = LoggerFactory.getLogger(SimpleappApplication.class);
 
 
