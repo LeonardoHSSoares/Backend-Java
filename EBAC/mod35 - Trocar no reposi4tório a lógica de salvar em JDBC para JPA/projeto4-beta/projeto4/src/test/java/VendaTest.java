@@ -13,53 +13,46 @@ import com.leonardo.domain.Venda;
 
 public class VendaTest {
 
-    private GenericDAOImpl<Cliente> daoCliente;
-    private GenericDAOImpl<Produto> daoProduto;
-    private GenericDAOImpl<Venda> daoVenda;
+    private GenericDAOImpl<Cliente> clienteDAO;
+    private GenericDAOImpl<Produto> produtoDAO;
+    private GenericDAOImpl<Venda> vendaDAO;
 
     @BeforeEach
     public void setUp() {
-        daoCliente = new GenericDAOImpl<>(Cliente.class);
-        daoProduto = new GenericDAOImpl<>(Produto.class);
-        daoVenda = new GenericDAOImpl<>(Venda.class);
+        clienteDAO = new GenericDAOImpl<>(Cliente.class);
+        produtoDAO = new GenericDAOImpl<>(Produto.class);
+        vendaDAO = new GenericDAOImpl<>(Venda.class);
     }
 
     @Test
     public void testCriarVenda() {
-        Cliente cliente = new Cliente();
-        cliente.setNome("Cliente Venda");
-        cliente.setCpf("12312312300");
-        cliente.setEndereco("Rua Venda");
-        cliente.setTelefone("1177777777");
-        daoCliente.cadastrar(cliente);
-
-        Produto produto = new Produto();
-        produto.setNome("Produto Teste");
-        produto.setPreco(100);
-        daoProduto.cadastrar(produto);
+    
+        Cliente cliente = clienteDAO.consultar(1L);
+        assertNotNull(cliente);
+        Produto produto = produtoDAO.consultar(13L);
 
         Venda venda = new Venda();
         venda.setCliente(cliente);
         venda.getProdutos().add(produto);
         venda.setQuantidade(2);
         venda.calcularValorTotal();
+        
+        vendaDAO.cadastrar(venda);
 
-        daoVenda.cadastrar(venda);
-
-        Venda encontrada = daoVenda.consultar(venda.getId());
+        Venda encontrada = vendaDAO.consultar(venda.getId());
         assertNotNull(encontrada);
-        assertEquals(200, encontrada.getValorTotal(), 0.01);
+        assertEquals(2000, encontrada.getValorTotal(), 0.01);
     }
 
     @Test
     public void testExclusaoLogicaVenda() {
-        List<Venda> vendas = daoVenda.buscarTodos();
+        List<Venda> vendas = vendaDAO.buscarTodos();
         for (Venda v : vendas) {
             v.setAtivo(false);
-            daoVenda.atualizar(v);
+            vendaDAO.atualizar(v);
         }
 
-        for (Venda v : daoVenda.buscarTodos()) {
+        for (Venda v : vendaDAO.buscarTodos()) {
             assertFalse(v.isAtivo());
         }
     }

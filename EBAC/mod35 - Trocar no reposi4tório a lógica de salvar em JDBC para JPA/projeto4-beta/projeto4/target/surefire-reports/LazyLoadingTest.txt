@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: LazyLoadingTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.344 s - in LazyLoadingTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.24 s <<< FAILURE! - in LazyLoadingTest
+testLazyLoading  Time elapsed: 0.238 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at LazyLoadingTest.testLazyLoading(LazyLoadingTest.java:33)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at LazyLoadingTest.testLazyLoading(LazyLoadingTest.java:33)
+Caused by: org.postgresql.util.PSQLException: 
+ERRO: duplicar valor da chave viola a restrição de unicidade "uk_jgra977gi05fur83l225x4qkr"
+  Detalhe: Chave (cpf)=(22222222222) já existe.
+	at LazyLoadingTest.testLazyLoading(LazyLoadingTest.java:33)
+

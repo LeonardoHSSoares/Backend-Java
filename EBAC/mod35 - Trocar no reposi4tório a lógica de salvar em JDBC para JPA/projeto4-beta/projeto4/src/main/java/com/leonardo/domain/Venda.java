@@ -11,12 +11,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Venda {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "venda_seq")
+    @SequenceGenerator(name = "venda_seq", sequenceName = "sq_venda", allocationSize = 1, initialValue = 1)
     private Long id;
 
     @ManyToOne(optional = false)

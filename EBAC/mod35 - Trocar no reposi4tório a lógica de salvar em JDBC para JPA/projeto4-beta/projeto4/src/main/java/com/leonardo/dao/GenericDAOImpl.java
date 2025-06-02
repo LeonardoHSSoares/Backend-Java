@@ -44,10 +44,24 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
     }
 
     @Override
+    public void excluir(Long id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        T obj = em.find(entidade, id);
+        if (obj != null) {
+            em.remove(obj);
+        }
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    @Override
     public List<T> buscarTodos() {
         EntityManager em = emf.createEntityManager();
         List<T> lista = em.createQuery("FROM " + entidade.getSimpleName(), entidade).getResultList();
         em.close();
         return lista;
     }
+
+    
 }

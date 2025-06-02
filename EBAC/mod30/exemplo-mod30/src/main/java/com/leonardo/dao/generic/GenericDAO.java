@@ -24,7 +24,7 @@ public abstract class GenericDAO<T extends Persistente, E extends Serializable> 
 
     public abstract Class<T> getTipoClasse();
 
-    public abstract void atualiarDados(T entity, T entityCadastrado);
+    public abstract void atualizarDados(T entity, T entityCadastrado);
 
     public GenericDAO() {
         this.singletonMap = SingletonMap.getInstance();
@@ -42,7 +42,6 @@ public abstract class GenericDAO<T extends Persistente, E extends Serializable> 
                     returnValue = (E) method.invoke(entity);
                     return returnValue;
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-                    //Criar exception de negócio TipoChaveNaoEncontradaException
                     e.printStackTrace();
                     throw new TipoChaveNaoEncontradaException("Chave principal do objeto " + entity.getClass() + " não encontrada", e);
                 }
@@ -94,7 +93,7 @@ public abstract class GenericDAO<T extends Persistente, E extends Serializable> 
         E chave = getChave(entity);
         T objetoCadastrado = mapaInterno.get(chave);
         if (objetoCadastrado != null) {
-            atualiarDados(entity, objetoCadastrado);
+            atualizarDados(entity, objetoCadastrado);
         }
     }
 

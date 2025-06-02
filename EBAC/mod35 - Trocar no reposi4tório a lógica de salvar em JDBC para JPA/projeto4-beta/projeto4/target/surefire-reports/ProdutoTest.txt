@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: ProdutoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.025 s <<< FAILURE! - in ProdutoTest
+consultarTodosProdutosTest  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <6> but was: <11>
+	at ProdutoTest.consultarTodosProdutosTest(ProdutoTest.java:77)
+
+cadastrarProdutoTest  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <19> but was: <Mouse Logitech>
+	at ProdutoTest.cadastrarProdutoTest(ProdutoTest.java:31)
+

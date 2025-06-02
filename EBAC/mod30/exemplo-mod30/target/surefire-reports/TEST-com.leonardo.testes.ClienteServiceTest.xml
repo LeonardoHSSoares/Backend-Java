@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin"/>
-    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752\surefirebooter-20250513114222961_3.jar C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752 2025-05-13T11-42-21_362-jvmRun1 surefire-20250513114222961_1tmp surefire_0-20250513114222961_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334\surefirebooter-20250531113932842_3.jar C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334 2025-05-31T11-39-32_714-jvmRun1 surefire-20250531113932842_1tmp surefire_0-20250531113932842_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="d:\repositorios\Backend-Java\EBAC\mod30\exemplo-mod30\target\test-classes;d:\repositorios\Backend-Java\EBAC\mod30\exemplo-mod30\target\classes;C:\Users\masco\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\masco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752\surefirebooter-20250513114222961_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334\surefirebooter-20250531113932842_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>

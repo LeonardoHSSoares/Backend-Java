@@ -19,7 +19,7 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 	}
 
 	@Override
-	public void atualiarDados(Venda entity, Venda entityCadastrado) {
+	public void atualizarDados(Venda entity, Venda entityCadastrado) {
 		entityCadastrado.setCodigo(entity.getCodigo());
 		entityCadastrado.setStatus(entity.getStatus());
 	}
@@ -44,7 +44,16 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 		} catch (SQLException e) {
 			throw new DAOException("ERRO ATUALIZANDO OBJETO ", e);
 		} finally {
-			closeConnection(connection, stm, null); // Agora o método está definido
+			try {
+				if (stm != null) {
+					stm.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				throw new DAOException("ERRO FECHANDO CONEXÃO ", e);
+			}
 		}
 	}
 }

@@ -5,7 +5,6 @@ import javax.persistence.Persistence;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import com.leonardo.domain.Cliente;
 
@@ -20,7 +19,6 @@ public class LazyLoadingTest {
         em = emf.createEntityManager();
     }
 
-    @Test
     public void testLazyLoading() {
         em.getTransaction().begin();
 

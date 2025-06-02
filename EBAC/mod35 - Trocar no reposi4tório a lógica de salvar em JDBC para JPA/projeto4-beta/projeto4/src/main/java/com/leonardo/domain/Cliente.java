@@ -5,13 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "tb_cliente")
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq")
+    @SequenceGenerator(name = "cliente_seq", sequenceName = "sq_cliente", allocationSize = 1, initialValue = 1)
     private Long id;
 
     @Column(nullable = false, length = 100)
@@ -20,10 +24,13 @@ public class Cliente {
     @Column(nullable = false, length = 11, unique = true)
     private String cpf;
 
+    @Column(length = 15)
     private String telefone;
+
+    @Column(length = 200)
     private String endereco;
 
-    @Column(nullable = false)
+    @Column()
     private boolean ativo = true;
 
     public Long getId() {

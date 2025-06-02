@@ -15,7 +15,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 	}
 
 	@Override
-	public void atualiarDados(Produto entity, Produto entityCadastrado) {
+	public void atualizarDados(Produto entity, Produto entityCadastrado) {
 		entityCadastrado.setCodigo(entity.getCodigo());
 		entityCadastrado.setDescricao(entity.getDescricao());
 		entityCadastrado.setNome(entity.getNome());

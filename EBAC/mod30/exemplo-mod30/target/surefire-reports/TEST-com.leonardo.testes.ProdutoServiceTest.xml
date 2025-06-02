@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin"/>
-    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752\surefirebooter-20250513114222961_3.jar C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752 2025-05-13T11-42-21_362-jvmRun1 surefire-20250513114222961_1tmp surefire_0-20250513114222961_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334\surefirebooter-20250531113932842_3.jar C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334 2025-05-31T11-39-32_714-jvmRun1 surefire-20250531113932842_1tmp surefire_0-20250531113932842_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="d:\repositorios\Backend-Java\EBAC\mod30\exemplo-mod30\target\test-classes;d:\repositorios\Backend-Java\EBAC\mod30\exemplo-mod30\target\classes;C:\Users\masco\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\masco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire5431882831983955752\surefirebooter-20250513114222961_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire6210956298423466334\surefirebooter-20250531113932842_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>
@@ -64,7 +64,7 @@
 	at com.leonardo.testes.dao.ProdutoDAOMock.excluir(ProdutoDAOMock.java:20)
 	at com.leonardo.testes.dao.ProdutoDAOMock.excluir(ProdutoDAOMock.java:9)
 	at com.leonardo.services.generic.GenericService.excluir(GenericService.java:26)
-	at com.leonardo.testes.ProdutoServiceTest.excluir(ProdutoServiceTest.java:50)
+	at com.leonardo.testes.ProdutoServiceTest.excluir(ProdutoServiceTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -99,7 +99,7 @@
 	at com.leonardo.testes.dao.ProdutoDAOMock.cadastrar(ProdutoDAOMock.java:14)
 	at com.leonardo.testes.dao.ProdutoDAOMock.cadastrar(ProdutoDAOMock.java:9)
 	at com.leonardo.services.generic.GenericService.cadastrar(GenericService.java:21)
-	at com.leonardo.testes.ProdutoServiceTest.salvar(ProdutoServiceTest.java:44)
+	at com.leonardo.testes.ProdutoServiceTest.salvar(ProdutoServiceTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -134,7 +134,7 @@
 	at com.leonardo.testes.dao.ProdutoDAOMock.alterar(ProdutoDAOMock.java:26)
 	at com.leonardo.testes.dao.ProdutoDAOMock.alterar(ProdutoDAOMock.java:9)
 	at com.leonardo.services.generic.GenericService.alterar(GenericService.java:31)
-	at com.leonardo.testes.ProdutoServiceTest.alterarCliente(ProdutoServiceTest.java:56)
+	at com.leonardo.testes.ProdutoServiceTest.alterarCliente(ProdutoServiceTest.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -169,7 +169,7 @@
 	at com.leonardo.testes.dao.ProdutoDAOMock.consultar(ProdutoDAOMock.java:32)
 	at com.leonardo.testes.dao.ProdutoDAOMock.consultar(ProdutoDAOMock.java:9)
 	at com.leonardo.services.generic.GenericService.consultar(GenericService.java:36)
-	at com.leonardo.testes.ProdutoServiceTest.pesquisar(ProdutoServiceTest.java:38)
+	at com.leonardo.testes.ProdutoServiceTest.pesquisar(ProdutoServiceTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)

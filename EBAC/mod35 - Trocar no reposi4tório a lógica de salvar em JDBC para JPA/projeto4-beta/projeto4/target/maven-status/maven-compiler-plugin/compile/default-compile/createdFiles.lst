@@ -1,0 +1,6 @@
+com\leonardo\dao\GenericDAO.class
+com\leonardo\domain\Cliente.class
+com\leonardo\domain\Produto.class
+com\leonardo\dao\GenericDAOImpl.class
+com\leonardo\domain\Venda.class
+com\leonardo\Main.class

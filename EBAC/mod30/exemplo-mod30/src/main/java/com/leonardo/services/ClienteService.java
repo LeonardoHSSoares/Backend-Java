@@ -7,11 +7,9 @@ import com.leonardo.services.generic.GenericService;
 
 public class ClienteService extends GenericService<Cliente, Long> implements IClienteService {
 	
-	//private IClienteDAO clienteDAO;
 	
 	public ClienteService(IClienteDAO clienteDAO) {
 		super(clienteDAO);
-		//this.clienteDAO = clienteDAO;
 	}
 
 //	@Override
