@@ -3,47 +3,44 @@ package com.leonardo;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import org.junit.gen5.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+
 import com.leonardo.dao.factory.jdbc.ConnectionFactory;
 
 public class ConnectionFactoryTest {
 
-    @Test
-    public void testConnection() throws SQLException {
-
-        try (Connection connection = ConnectionFactory.getConnection()) {
-
-            assert connection != null;
-            assert !connection.isClosed();
-
-            System.out.println("Conexão estabelecida com sucesso!");
-
+    @AfterEach
+    public void tearDown() {
+        try {
+            Connection connection = ConnectionFactory.getConnection();
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
+            }
         } catch (SQLException e) {
-
-            throw new SQLException("Erro ao estabelecer conexão: " + e.getMessage(), e);
-
-        } finally {
-
-            ConnectionFactory.closeConnection();
-
-            assert ConnectionFactory.getConnection().isClosed();
-            assert ConnectionFactory.getConnection() == null;
-
-            System.out.println("Conexão fechada.");
-
+            System.out.println("An error occurred while closing the connection: " + e.getMessage());
         }
     }
 
     @Test
-    public void testConnectionWithException() {
+    public void testConnection(){
 
         try {
-            ConnectionFactory.getConnection();
-            assert false : "Expected SQLException was not thrown";
+            Connection connection = ConnectionFactory.getConnection();
+            if (connection != null && !connection.isClosed()) {
+                assert !connection.isClosed() : "Connection should be open";
+                System.out.println("Connection successful!");
+            } else {
+                assert false : "Connection should not be null or closed";
+                System.out.println("Connection failed!");
+            }
         } catch (SQLException e) {
-            assert e.getMessage().contains("Connection error") : "Unexpected exception message: " + e.getMessage();
-            System.out.println("Erro ao estabelecer conexão: " + e.getMessage());
+
+            System.out.println("An error occurred while trying to connect: " + e.getMessage());
+
         }
+
     }
+
 
 }

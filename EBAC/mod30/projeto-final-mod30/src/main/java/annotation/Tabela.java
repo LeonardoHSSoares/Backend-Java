@@ -17,9 +17,9 @@ import java.lang.annotation.Target;
  * O valor padrão é uma string vazia, mas pode ser alterado conforme necessário.
  */
 @Documented
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Tabela {
 
-    String value() default "";
+    String value();
 }

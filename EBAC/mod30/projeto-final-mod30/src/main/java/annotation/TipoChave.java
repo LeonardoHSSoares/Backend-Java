@@ -22,5 +22,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TipoChave {
 
-    long id() default 1L;
+    String value(); // Método que retorna o id do objeto
 }

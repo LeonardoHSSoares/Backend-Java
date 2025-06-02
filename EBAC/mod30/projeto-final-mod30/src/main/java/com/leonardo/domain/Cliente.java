@@ -1,0 +1,64 @@
+package com.leonardo.domain;
+
+import com.leonardo.dao.Persistence;
+
+import annotation.ColunaTabela;
+import annotation.Tabela;
+import annotation.TipoChave;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author Leonardo Soares
+ *
+ * Classe Cliente que representa um cliente no sistema.
+ * Esta classe contém informações como nome, CPF, telefone, endereço, número, cidade, estado e email.
+ * Ela implementa a interface Persistence para garantir que tenha um identificador único (ID).
+ */
+@Getter
+@Setter
+@AllArgsConstructor
+@Tabela("TB_CLIENTE")
+public class Cliente implements Persistence {
+
+    @TipoChave("getId")
+    @ColunaTabela(dbName = "id", setJavaName= "setId")
+    private Long id;
+
+    @ColunaTabela(dbName = "nome", setJavaName= "setNome")
+    private String nome;
+
+    
+    @ColunaTabela(dbName = "cpf", setJavaName= "setCpf")
+    private Long cpf;
+
+    @ColunaTabela(dbName = "telefone", setJavaName= "setTelefone")
+    private Long telefone;
+
+    @ColunaTabela(dbName = "endereco", setJavaName= "setEndereco")
+    private String endereco;
+
+    @ColunaTabela(dbName = "numero", setJavaName= "setNumero")
+    private Integer numero;
+
+    @ColunaTabela(dbName = "cidade", setJavaName= "setCidade")
+    private String cidade;
+
+    @ColunaTabela(dbName = "estado", setJavaName= "setEstado")
+    private String estado;
+
+    @ColunaTabela(dbName = "email", setJavaName= "setEmail")
+    private String email;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+}
