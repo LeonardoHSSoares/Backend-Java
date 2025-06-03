@@ -1,4 +1,4 @@
-package com.leonardo.domain;
+package com.leonardo.dao;
 
 import java.util.Collection;
 
