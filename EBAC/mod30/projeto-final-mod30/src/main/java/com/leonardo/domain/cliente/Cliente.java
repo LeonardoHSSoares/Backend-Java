@@ -22,13 +22,13 @@ import lombok.Setter;
 @Tabela("TB_CLIENTE")
 public class Cliente implements Persistence {
 	
-	@TipoChave("getId")
 	@ColunaTabela(dbName = "id", setJavaName = "setId")
 	private Long id;
 	
 	@ColunaTabela(dbName = "nome", setJavaName = "setNome")
 	private String nome;
 	
+	@TipoChave("getCpf")
 	@ColunaTabela(dbName = "cpf", setJavaName = "setCpf")
     private Long cpf;
     

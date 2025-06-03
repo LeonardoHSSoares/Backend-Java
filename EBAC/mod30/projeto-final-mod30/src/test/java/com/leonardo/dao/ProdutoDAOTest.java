@@ -20,7 +20,7 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 
 public class ProdutoDAOTest {
 
-    private IProdutoDAO produtoDao;
+    private final IProdutoDAO produtoDao;
 
     public ProdutoDAOTest() {
         produtoDao = new ProdutoDAO();

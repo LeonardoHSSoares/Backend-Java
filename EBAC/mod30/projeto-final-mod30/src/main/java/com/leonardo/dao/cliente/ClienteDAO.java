@@ -67,7 +67,7 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 
 	@Override
 	protected String getQueryExclusao() {
-		return "DELETE FROM TB_CLIENTE WHERE ID = ?";
+		return "DELETE FROM TB_CLIENTE WHERE CPF = ?";
 	}
 
 	@Override
@@ -86,7 +86,7 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 		sb.append("CIDADE = ?,");
 		sb.append("ESTADO = ?,");
 		sb.append("EMAIL = ?");
-		sb.append(" WHERE ID = ?");
+		sb.append(" WHERE CPF = ?");
 		return sb.toString();
 	}
 
@@ -98,8 +98,8 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 		stmUpdate.setLong(4, entity.getNumero());
 		stmUpdate.setString(5, entity.getCidade());
 		stmUpdate.setString(6, entity.getEstado());
-		stmUpdate.setLong(7, entity.getCpf());
-		stmUpdate.setString(8, entity.getEmail());
+		stmUpdate.setString(7, entity.getEmail());
+		stmUpdate.setLong(8, entity.getCpf());
 	}
 
 	@Override
