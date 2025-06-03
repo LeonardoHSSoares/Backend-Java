@@ -1,7 +1,14 @@
 package com.leonardo;
 
-public class Main {
-    public static void main(String[] args) {
+import java.sql.SQLException;
 
+import com.leonardo.exceptions.DAOException;
+import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+
+public class Main {
+    public static void main(String[] args) throws SQLException, TipoChaveNaoEncontradaException, DAOException {
+
+    
+        
     }
 }

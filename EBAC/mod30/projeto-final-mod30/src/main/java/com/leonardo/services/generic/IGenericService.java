@@ -16,52 +16,48 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
  * Esta interface é responsável por fornecer operações básicas de CRUD (Create, Read, Update, Delete)
  * para entidades persistentes.
  */
-public interface IGenericService<T extends Persistence, E extends Serializable> {
-
-    /**
-     * Método para salvar um objeto no banco de dados.
+public interface IGenericService <T extends Persistence, E extends Serializable> {
+	
+	/**
+     * Método para cadastrar novos registro no banco de dados
      *
-     * @param entity Objeto a ser salvo.
-     * @return O objeto salvo com o ID atribuído.
+     * @param entity a ser cadastrado
+     * @return retorna verdadeiro para cadastrado e falso para não cadastrado
+	 * @throws DAOException 
      */
     public Boolean cadastrar(T entity) throws TipoChaveNaoEncontradaException, DAOException;
 
     /**
-     * Método para atualizar um objeto no banco de dados.
+     * Método para excluir um registro do banco de dados
      *
-     * @param entity Objeto a ser atualizado.
+     * @param valor chave única do dado a ser excluído
+     * @throws DAOException 
+     */
+    public void excluir(E valor) throws DAOException;
+
+    /**
+     *Método para alterar um registro no bando de dados.
+     *
+     * @param entity a ser atualizado
+     * @throws DAOException 
      */
     public void alterar(T entity) throws TipoChaveNaoEncontradaException, DAOException;
 
     /**
-     * Método para excluir um objeto do banco de dados.
+     * Método para consultar um registro no banco de dados
      *
-     * @param valor ID do objeto a ser excluído.
+     * @param valor chave única do dado a ser consultado
+     * @return
+     * @throws DAOException 
      */
-    
-    public void excluir(E valor) throws DAOException;
+    public T consultar(E valor) throws DAOException;
 
     /**
-     * Método para buscar um objeto pelo ID.
+     * Método que irá retornar todos os registros do banco de dados de uma determinado dado ou tabela
      *
-     * @param id ID do objeto a ser buscado.
-     * @return O objeto encontrado ou null se não existir.
+     * @return Registros encontrados
+     * @throws DAOException 
      */
-
-    public T consultarPorID(E id) throws DAOException;
-
-    /**
-     * Método para buscar todos os objetos do tipo T.
-     *
-     * @return Coleção de objetos do tipo T.
-     */
-
     public Collection<T> buscarTodos() throws DAOException;
-    /**
-     * Método para verificar se um objeto existe no banco de dados.
-     *
-     * @param entity Objeto a ser verificado.
-     * @return true se o objeto existir, false caso contrário.
-     */
 
 }

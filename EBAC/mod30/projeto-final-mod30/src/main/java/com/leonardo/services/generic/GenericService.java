@@ -20,15 +20,16 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
  *
  * Ela utiliza um DAO genérico (IGenericDAO) para realizar as operações de persistência.
  */
-public abstract class GenericService<T extends Persistence, E extends Serializable> implements IGenericService<T, E> {
+public abstract class GenericService<T extends Persistence, E extends Serializable> 
+	implements IGenericService<T, E> {
+	
+	protected IGenericDAO<T,E> dao;
+	
+	public GenericService(IGenericDAO<T,E> dao) {
+		this.dao = dao;
+	}
 
-    protected IGenericDAO<T, E> dao;
-
-    public GenericService(IGenericDAO<T, E> dao) {
-        this.dao = dao;
-    }
-
-    @Override
+	@Override
 	public Boolean cadastrar(T entity) throws TipoChaveNaoEncontradaException, DAOException {
 		return this.dao.cadastrar(entity);
 	}
@@ -44,18 +45,20 @@ public abstract class GenericService<T extends Persistence, E extends Serializab
 	}
 
 	@Override
-	public Collection<T> buscarTodos() throws DAOException {
-		return this.dao.buscarTodos();
-	}
-
-    @Override
-    public T consultarPorID(E id) throws DAOException {
-        try {
-			return this.dao.consultarPorID(id);
+	public T consultar(E valor) throws DAOException {
+		try {
+			return this.dao.consultar(valor);
 		} catch (MaisDeUmRegistroException | TableException e) {
+			// TODO Auto-generated catch block
+			//TODO levantar um erro genérico
 			e.printStackTrace();
 		}
 		return null;
-    }
+	}
+
+	@Override
+	public Collection<T> buscarTodos() throws DAOException {
+		return this.dao.buscarTodos();
+	}
 
 }

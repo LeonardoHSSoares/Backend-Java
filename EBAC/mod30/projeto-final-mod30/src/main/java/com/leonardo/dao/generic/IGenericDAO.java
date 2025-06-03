@@ -9,56 +9,55 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 
+/**
+ * @author Leonardo Soares
+ *         * Interface IGenericDAO que define os métodos genéricos para acesso a
+ *         dados.
+ *         * Esta interface é responsável por fornecer operações básicas de CRUD
+ *         (Create, Read, Update, Delete)
+ *         para entidades persistentes.
+ */
+
 public interface IGenericDAO<T extends Persistence, E extends Serializable> {
 
     /**
-     * Método para salvar um objeto no banco de dados.
+     * Método para cadastrar novos registro no banco de dados
      *
-     * @param entity Objeto a ser salvo.
-     * @return O objeto salvo com o ID atribuído.
-     * @throws TipoChaveNaoEncontradaException Se a chave do objeto não for
-     *                                         encontrada.
-     * @throws DAOException                    Se ocorrer um erro ao acessar o banco
-     *                                         de dados.
+     * @param entity a ser cadastrado
+     * @return retorna verdadeiro para cadastrado e falso para não cadastrado
      */
     public Boolean cadastrar(T entity) throws TipoChaveNaoEncontradaException, DAOException;
 
     /**
-     * Método para atualizar um objeto no banco de dados.
+     * Método para excluir um registro do banco de dados
      *
-     * @param entity Objeto a ser atualizado.
-     * @return O objeto atualizado.
-     * @throws TipoChaveNaoEncontradaException Se a chave do objeto não for
-     *                                         encontrada.
-     * @throws DAOException                    Se ocorrer um erro ao acessar o banco
-     *                                         de dados.
-     */
-    public void alterar(T entity) throws TipoChaveNaoEncontradaException, DAOException;
-
-    /**
-     * Método para excluir um objeto do banco de dados.
-     *
-     * @param id ID do objeto a ser excluído.
-     * @throws DAOException Se ocorrer um erro ao acessar o banco de dados.
+     * @param valor chave única do dado a ser excluído
      */
     public void excluir(E valor) throws DAOException;
 
     /**
-     * Método para buscar um objeto pelo ID.
+     * Método para alterar um registro no bando de dados.
      *
-     * @param id ID do objeto a ser buscado.
-     * @return O objeto encontrado ou null se não existir.
-     * @throws DAOException Se ocorrer um erro ao acessar o banco de dados.
-     * @throws TipoChaveNaoEncontradaException Se a chave do objeto não for encontrada.
+     * @param entity a ser atualizado
      */
-    public T consultarPorID(E id) throws MaisDeUmRegistroException, TableException, DAOException;
+    public void alterar(T entity) throws TipoChaveNaoEncontradaException, DAOException;
 
     /**
-     * Método para buscar todos os objetos do tipo T.
+     * Método para consultar um registro no banco de dados
      *
-     * @return Coleção de objetos do tipo T.
-     * @throws DAOException Se ocorrer um erro ao acessar o banco de dados.
+     * @param valor chave única do dado a ser consultado
+     * @return
+     * @throws MaisDeUmRegistroException
+     * @throws TableException
+     */
+    public T consultar(E valor) throws MaisDeUmRegistroException, TableException, DAOException;
+
+    /**
+     * Método que irá retornar todos os registros do banco de dados de uma
+     * determinado dado ou tabela
+     *
+     * @return Registros encontrados
+     * @throws DAOException
      */
     public Collection<T> buscarTodos() throws DAOException;
-
 }

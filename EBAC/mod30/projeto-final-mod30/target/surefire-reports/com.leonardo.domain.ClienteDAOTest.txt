@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: com.leonardo.domain.ClienteDAOTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.049 s <<< FAILURE! -- in com.leonardo.domain.ClienteDAOTest
+com.leonardo.domain.ClienteDAOTest.pesquisarCliente -- Time elapsed: 0.022 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+	cliente cannot be resolved
+
+	at com.leonardo.domain.ClienteDAOTest.pesquisarCliente(ClienteDAOTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

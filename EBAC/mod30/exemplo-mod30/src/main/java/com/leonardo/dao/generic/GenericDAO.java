@@ -68,6 +68,7 @@ public abstract class GenericDAO<T extends Persistente, E extends Serializable> 
         return true;
     }
 
+    @SuppressWarnings("unchecked")
 	private Map<E, T> getMapa() {
 		Map<E, T> mapaInterno = (Map<E, T>) this.singletonMap.getMap().get(getTipoClasse());
 		if (mapaInterno == null) {

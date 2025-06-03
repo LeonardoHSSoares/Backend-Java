@@ -10,7 +10,7 @@ public class SingletonMap {
      * Contém todos os registros da aplicação.
      * Simula o banco de dados
      */
-    protected Map<Class, Map<?, ?>> map;
+    protected Map<Class<?>, Map<?, ?>> map;
 
     private SingletonMap() {
         map = new HashMap<>();
@@ -28,7 +28,7 @@ public class SingletonMap {
         return singletonMap;
     }
 
-    public Map<Class, Map<?, ?>> getMap() {
+    public Map<Class<?>, Map<?, ?>> getMap() {
         return this.map;
     }
 }
