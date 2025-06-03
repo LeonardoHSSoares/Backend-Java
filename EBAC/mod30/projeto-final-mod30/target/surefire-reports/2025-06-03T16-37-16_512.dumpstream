@@ -1,4 +1,4 @@
-# Created at 2025-06-02T15:15:12.247
+# Created at 2025-06-03T16:37:16.711
 Boot Manifest-JAR contains absolute paths in classpath 'D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

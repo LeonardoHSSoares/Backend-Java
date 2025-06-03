@@ -16,6 +16,7 @@ public class ConnectionFactory {
 
 	private static Connection connection;
 
+    @SuppressWarnings("unused")
 	private ConnectionFactory(Connection connection) {
 		
 	}

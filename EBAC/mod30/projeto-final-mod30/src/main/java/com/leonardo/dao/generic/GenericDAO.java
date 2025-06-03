@@ -63,31 +63,29 @@ public abstract class GenericDAO<T extends Persistence, E extends Serializable> 
 
     }
 
+    @SuppressWarnings("unchecked")
     public E getChave(T entity) throws TipoChaveNaoEncontradaException {
         Field[] fields = entity.getClass().getDeclaredFields();
-        E returnValue = null;
+        if (fields == null || fields.length == 0) {
+            String msg = "Chave principal do objeto " + entity.getClass() + " não encontrada";
+            System.out.println("**** ERRO ****" + msg);
+            throw new TipoChaveNaoEncontradaException(msg);
+        }
         for (Field field : fields) {
             if (field.isAnnotationPresent(TipoChave.class)) {
                 TipoChave tipoChave = field.getAnnotation(TipoChave.class);
                 String nomeMetodo = tipoChave.value();
                 try {
                     Method method = entity.getClass().getMethod(nomeMetodo);
-                    returnValue = (E) method.invoke(entity);
-                    return returnValue;
+                    return (E) method.invoke(entity); 
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                     // Criar exception de negócio TipoChaveNaoEncontradaException
-                    e.printStackTrace();
                     throw new TipoChaveNaoEncontradaException(
                             "Chave principal do objeto " + entity.getClass() + " não encontrada", e);
                 }
             }
         }
-        if (returnValue == null) {
-            String msg = "Chave principal do objeto " + entity.getClass() + " não encontrada";
-            System.out.println("**** ERRO ****" + msg);
-            throw new TipoChaveNaoEncontradaException(msg);
-        }
-        return null;
+      return null; // Retorna null se não encontrar a chave
     }
 
     @Override

@@ -7,9 +7,12 @@ D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\le
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\dao\generic\IGenericDAO.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\dao\generic\SingletonMap.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\dao\Persistence.java
+D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\dao\produto\IProdutoDAO.java
+D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\dao\produto\ProdutoDAO.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\domain\cliente\Cliente.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\domain\factory\ClienteFactory.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\domain\factory\jdbc\ConnectionFactory.java
+D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\domain\produto\Produto.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\exceptions\DAOException.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\exceptions\MaisDeUmRegistroException.java
 D:\repositorios\Backend-Java\EBAC\mod30\projeto-final-mod30\src\main\java\com\leonardo\exceptions\TableException.java

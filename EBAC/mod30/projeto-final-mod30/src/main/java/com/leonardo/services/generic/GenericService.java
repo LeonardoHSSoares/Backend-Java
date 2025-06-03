@@ -49,9 +49,8 @@ public abstract class GenericService<T extends Persistence, E extends Serializab
 		try {
 			return this.dao.consultar(valor);
 		} catch (MaisDeUmRegistroException | TableException e) {
-			// TODO Auto-generated catch block
-			//TODO levantar um erro genérico
-			e.printStackTrace();
+                    // Log the exception or handle it as needed
+
 		}
 		return null;
 	}
