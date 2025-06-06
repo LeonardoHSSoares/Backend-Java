@@ -82,13 +82,11 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
     stmUpdate.setString(3, entity.getDescricao());
     stmUpdate.setBigDecimal(4, entity.getPreco());
     stmUpdate.setInt(5, entity.getQuantidadeEstoque());
-    stmUpdate.setLong(6, entity.getId());
     }
 
     @Override
     protected void setParametrosQuerySelect(PreparedStatement stmUpdate, String valor) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setParametrosQuerySelect'");
+        stmUpdate.setString(1, valor);
     }
 
 }

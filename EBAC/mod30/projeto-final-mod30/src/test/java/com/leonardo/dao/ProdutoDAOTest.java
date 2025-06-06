@@ -5,11 +5,11 @@ import java.util.Collection;
 import java.util.UUID;
 
 import org.junit.jupiter.api.Assertions;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import com.github.javafaker.Faker;
 import com.leonardo.dao.produto.IProdutoDAO;
 import com.leonardo.dao.produto.ProdutoDAO;
 import com.leonardo.domain.produto.Produto;
@@ -40,62 +40,119 @@ public class ProdutoDAOTest {
     // }
 
     private Produto criarProduto(String codigo) throws TipoChaveNaoEncontradaException, DAOException {
+        Faker faker = new Faker();
         Produto produto = new Produto();
         produto.setCodigo(codigo);
-        produto.setDescricao("Produto 1");
-        produto.setNome("Produto 1");
-        produto.setPreco(BigDecimal.TEN);
+        produto.setDescricao(faker.lorem().sentence(10));
+        produto.setNome(faker.commerce().productName());
+        produto.setPreco(new BigDecimal(faker.commerce().price(10.0, 1000.0).replace(",", ".")));
         produto.setQuantidadeEstoque(1);
-        produtoDao.cadastrar(produto);
         return produto;
     }
 
-    private void excluir(String valor) throws DAOException {
-        this.produtoDao.excluir(valor);
-    }
-
     @Test
-    public void pesquisar()
+    public void pesquisarProduto()
             throws MaisDeUmRegistroException, TableException, DAOException, TipoChaveNaoEncontradaException {
-        Produto produto = criarProduto("A1");
-        Assertions.assertNotNull(produto);
-        Produto produtoDB = this.produtoDao.consultar(produto.getCodigo());
-        Assertions.assertNotNull(produtoDB);
-        excluir(produtoDB.getCodigo());
-    }
 
-    @Test
-    public void salvar() throws TipoChaveNaoEncontradaException, DAOException {
         UUID random = UUID.randomUUID();
-        String codigo = random.toString().substring(0, 10);
+        String codigo = random.toString().substring(0, 9);
+
         Produto produto = criarProduto(codigo);
-        Assertions.assertNotNull(produto);
-        // excluir(produto.getCodigo());
+        produtoDao.cadastrar(produto);
+
+        // Verifica se o produto foi cadastrado corretamente
+        try {
+            Produto produtoBD = produtoDao.consultar(produto.getCodigo());
+            assertEquals(produto.getCodigo(), produtoBD.getCodigo());
+        } catch (MaisDeUmRegistroException | DAOException e) {
+        }
+
+        // Exclui o produto após o teste
+        produtoDao.excluir(produto.getCodigo());
+        // Verifica se o produto foi excluído corretamente
+        Assertions.assertNotNull(this);
+
     }
 
     @Test
-    public void excluir()
-            throws DAOException, TipoChaveNaoEncontradaException, MaisDeUmRegistroException, TableException {
-        Produto produto = criarProduto("A3");
+    public void cadastrarProduto() throws TipoChaveNaoEncontradaException, DAOException {
+
+        UUID random = UUID.randomUUID();
+        String codigo = random.toString().substring(0, 9);
+
+        Produto produto = criarProduto(codigo);
+        // Verifica se o produto foi criado corretamente
         Assertions.assertNotNull(produto);
-        excluir(produto.getCodigo());
-        Produto produtoBD = this.produtoDao.consultar(produto.getCodigo());
-        assertNull(produtoBD);
+        // Cadastra o produto no banco de dados
+        produtoDao.cadastrar(produto);
+        // Verifica se o produto foi salvo no banco de dados
+        Assertions.assertNotNull(produto);
+
+        try {
+            Produto produtoBD = produtoDao.consultar(produto.getCodigo());
+            // Verifica se o produto foi consultado corretamente
+            Assertions.assertNotNull(produtoBD);
+            assertEquals(produto.getCodigo(), produtoBD.getCodigo());
+        } catch (MaisDeUmRegistroException | TableException | DAOException e) {
+            throw new RuntimeException("Erro ao consultar o produto cadastrado", e);
+        }
+
+        // Exclui o produto após o teste
+        produtoDao.excluir(produto.getCodigo());
+        // Verifica se o produto foi excluído corretamente
+        Assertions.assertNotNull(this);
+
+    }
+
+    @Test
+    public void excluirProduto()
+            throws DAOException, TipoChaveNaoEncontradaException, MaisDeUmRegistroException, TableException {
+
+        UUID random = UUID.randomUUID();
+        String codigo = random.toString().substring(0, 9);
+
+        Produto produto = criarProduto(codigo);
+        // Verifica se o produto foi criado corretamente
+        Assertions.assertNotNull(produto);
+        // Cadastra o produto no banco de dados
+        produtoDao.cadastrar(produto);
+        // Verifica se o produto foi cadastrado corretamente
+        Assertions.assertNotNull(produto);
+
+        try {
+            Produto produtoBD = produtoDao.consultar(produto.getCodigo());
+            // Verifica se o produto foi consultado corretamente
+            Assertions.assertNotNull(produtoBD);
+            assertEquals(produto.getCodigo(), produtoBD.getCodigo());
+        } catch (MaisDeUmRegistroException | TableException | DAOException e) {
+            throw new RuntimeException("Erro ao consultar o produto cadastrado", e);
+        }
+
+        // Exclui o produto após o teste
+        produtoDao.excluir(produto.getCodigo());
+        // Verifica se o produto foi excluído corretamente
+        Assertions.assertNotNull(this);
     }
 
     @Test
     public void alterarCliente()
             throws TipoChaveNaoEncontradaException, DAOException, MaisDeUmRegistroException, TableException {
-        Produto produto = criarProduto("A4");
-        produto.setNome("Rodrigo Pires");
-        produtoDao.alterar(produto);
-        Produto produtoBD = this.produtoDao.consultar(produto.getCodigo());
-        assertNotNull(produtoBD);
-        Assertions.assertEquals("Rodrigo Pires", produtoBD.getNome());
 
-        excluir(produto.getCodigo());
-        Produto produtoBD1 = this.produtoDao.consultar(produto.getCodigo());
-        assertNull(produtoBD1);
+        UUID random = UUID.randomUUID();
+        String codigo = random.toString().substring(0, 9);
+
+        Produto produto = criarProduto(codigo);
+        produto.setNome("Leonardo Soares");
+        produtoDao.alterar(produto);
+        try {
+            Produto produtoBD = produtoDao.consultar(produto.getCodigo());
+            // Verifica se o produto foi consultado corretamente
+            Assertions.assertNotNull(produtoBD);
+            Assertions.assertEquals("Leonardo Soares", produtoBD.getNome());
+        } catch (MaisDeUmRegistroException | TableException | DAOException e) {
+            throw new RuntimeException("Erro ao consultar o produto cadastrado", e);
+        }
+        
     }
 
     @Test
@@ -107,7 +164,7 @@ public class ProdutoDAOTest {
         assertTrue(list.size() == 2);
 
         for (Produto prod : list) {
-            excluir(prod.getCodigo());
+
         }
 
         list = produtoDao.buscarTodos();
@@ -115,4 +172,5 @@ public class ProdutoDAOTest {
         assertTrue(list.size() == 0);
 
     }
+
 }

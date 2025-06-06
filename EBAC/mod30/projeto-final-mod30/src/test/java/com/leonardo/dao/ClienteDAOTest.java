@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import com.github.javafaker.Faker;
 import com.leonardo.dao.cliente.ClienteDAO;
 import com.leonardo.dao.cliente.IClienteDAO;
 import com.leonardo.domain.cliente.Cliente;
@@ -43,20 +44,18 @@ public class ClienteDAOTest {
 
 		// Gera um CPF aleatório para o cliente
 		Long cpf = 10000000000L + new Random().nextLong(9999999999L);
-		// Gera um telefone aleatório para o cliente
-		Long tel = 11900000000L + new Random().nextLong(11999999999L);
-		// Gera um número aleatório para o cliente
-		Integer numero = new Random().nextInt(1000);
+		Long tel = 119000000L + new Random().nextLong(999999999L);
 
+		Faker faker = new Faker();
 		Cliente cliente = new Cliente();
 		cliente.setCpf(cpf);
-		cliente.setNome("Leonardo Soares");
-		cliente.setCidade("São Paulo");
-		cliente.setEnd("Rua Teste");
+		cliente.setNome(faker.name().fullName());
+		cliente.setCidade(faker.address().city());
+		cliente.setEnd(faker.address().streetName());
 		cliente.setEstado("SP");
-		cliente.setNumero(numero);
+		cliente.setNumero(faker.number().numberBetween(1, 100));
 		cliente.setTel(tel);
-		cliente.setEmail("leonardo@gmail.com");
+		cliente.setEmail(faker.internet().emailAddress());
 		return cliente;
 	}
 
@@ -102,6 +101,8 @@ public class ClienteDAOTest {
 		Assertions.assertNotNull(clienteConsultado);
 
 		clienteDao.excluir(clienteConsultado.getCpf());
+		// Verifica se o cliente foi excluído
+		Assertions.assertNull(clienteDao.consultar(novoCliente.getId()));
 	}
 
 	@Test
@@ -154,7 +155,7 @@ public class ClienteDAOTest {
 	}
 
 	@Test
-	public void buscarTodos() throws TipoChaveNaoEncontradaException, DAOException {
+	public void buscarTodosClientes() throws TipoChaveNaoEncontradaException, DAOException {
 		// Cria um cliente para teste
 		Cliente cliente1 = criaClienteParaTeste();
 		// Verifica se o cliente foi criado corretamente
