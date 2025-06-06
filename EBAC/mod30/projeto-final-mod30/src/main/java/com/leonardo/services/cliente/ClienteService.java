@@ -7,6 +7,8 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.services.generic.GenericService;
 
+
+
 /**
  * @author Leonardo Soares
  *
@@ -19,11 +21,8 @@ import com.leonardo.services.generic.GenericService;
  */
 public class ClienteService extends GenericService<Cliente, Long> implements IClienteService {
 
-	// private IClienteDAO clienteDAO;
-
 	public ClienteService(IClienteDAO clienteDAO) {
 		super(clienteDAO);
-		// this.clienteDAO = clienteDAO;
 	}
 
 	// @Override
@@ -37,8 +36,7 @@ public class ClienteService extends GenericService<Cliente, Long> implements ICl
 		try {
 			return this.dao.consultar(id);
 		} catch (MaisDeUmRegistroException | TableException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
 		}
 		return null;
 	}

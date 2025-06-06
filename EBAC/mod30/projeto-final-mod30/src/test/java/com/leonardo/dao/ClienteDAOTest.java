@@ -16,32 +16,38 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 
+/**
+ * @author Leonardo Soares
+ *
+ *         Classe de testes para ClienteDAO.
+ *         Responsável por validar as operações de CRUD (Create, Read, Update,
+ *         Delete)
+ *         para a entidade Cliente no banco de dados.
+ *         Utiliza o padrão de geração de dados aleatórios para simular clientes
+ *         reais.
+ *         Cada teste garante o isolamento dos dados e a integridade das
+ *         operações.
+ */
 public class ClienteDAOTest {
 
-	private  final IClienteDAO clienteDao;
+	// Instância do DAO de Cliente utilizada nos testes
+	private final IClienteDAO clienteDao;
 
+	/**
+	 * Construtor que inicializa o DAO de Cliente.
+	 */
 	public ClienteDAOTest() {
 		clienteDao = new ClienteDAO();
 	}
 
-	
-
-
-	// @AfterEach
-	// public void end() throws DAOException {
-	// Collection<Cliente> list = clienteDao.buscarTodos();
-	// list.forEach(cli -> {
-	// try {
-	// clienteDao.excluir(cli.getId());
-	// } catch (DAOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// });
-	// }
-
+	/**
+	 * Método utilitário para criar um cliente com dados aleatórios.
+	 * 
+	 * @return Cliente criado com dados simulados.
+	 * @throws TipoChaveNaoEncontradaException
+	 * @throws DAOException
+	 */
 	private Cliente criaClienteParaTeste() throws TipoChaveNaoEncontradaException, DAOException {
-
 		// Gera um CPF aleatório para o cliente
 		Long cpf = 10000000000L + new Random().nextLong(9999999999L);
 		Long tel = 119000000L + new Random().nextLong(999999999L);
@@ -59,11 +65,14 @@ public class ClienteDAOTest {
 		return cliente;
 	}
 
+	/**
+	 * Testa a pesquisa de um cliente cadastrado.
+	 * Garante que o cliente pode ser consultado corretamente após o cadastro.
+	 */
 	@Test
 	public void pesquisarCliente()
 			throws MaisDeUmRegistroException, TableException, TipoChaveNaoEncontradaException, DAOException {
 
-		//
 		// Cria um cliente para teste
 		Cliente novoCliente = criaClienteParaTeste();
 		// Verifica se o cliente foi criado corretamente
@@ -79,11 +88,16 @@ public class ClienteDAOTest {
 		// Verifica se o cliente foi consultado corretamente
 		Assertions.assertNotNull(clienteConsultado);
 
+		// Exclui o cliente após o teste
 		clienteDao.excluir(novoCliente.getCpf());
 		// Verifica se o cliente foi excluído
 		Assertions.assertNull(clienteDao.consultar(novoCliente.getId()));
 	}
 
+	/**
+	 * Testa o cadastro de um cliente.
+	 * Garante que o cliente é salvo corretamente no banco de dados.
+	 */
 	@Test
 	public void cadastrarCliente()
 			throws TipoChaveNaoEncontradaException, MaisDeUmRegistroException, TableException, DAOException {
@@ -100,15 +114,20 @@ public class ClienteDAOTest {
 		// Verifica se o cliente foi consultado corretamente
 		Assertions.assertNotNull(clienteConsultado);
 
+		// Exclui o cliente após o teste
 		clienteDao.excluir(clienteConsultado.getCpf());
 		// Verifica se o cliente foi excluído
 		Assertions.assertNull(clienteDao.consultar(novoCliente.getId()));
 	}
 
+	/**
+	 * Testa a exclusão de um cliente.
+	 * Garante que o cliente é removido corretamente do banco de dados.
+	 */
 	@Test
 	public void excluirCliente()
 			throws TipoChaveNaoEncontradaException, MaisDeUmRegistroException, TableException, DAOException {
-		
+
 		Cliente novoCLiente = criaClienteParaTeste();
 		// Verifica se o cliente foi criado corretamente
 		Assertions.assertNotNull(novoCLiente);
@@ -116,28 +135,32 @@ public class ClienteDAOTest {
 		Boolean retorno = clienteDao.cadastrar(novoCLiente);
 		// Verifica se o cliente foi cadastrado
 		Assertions.assertTrue(retorno);
-		
+
 		Cliente clienteConsultado = clienteDao.consultar(novoCLiente.getCpf());
 		// Verifica se o cliente foi consultado corretamente
 		Assertions.assertNotNull(clienteConsultado);
 
+		// Exclui o cliente após o teste
 		clienteDao.excluir(clienteConsultado.getCpf());
 		// Verifica se o cliente foi excluído
 		Assertions.assertNotNull(clienteConsultado);
-
-
 	}
 
+	/**
+	 * Testa a alteração de um cliente.
+	 * Garante que os dados do cliente são atualizados corretamente no banco.
+	 */
 	@Test
 	public void alterarCliente()
 			throws TipoChaveNaoEncontradaException, MaisDeUmRegistroException, TableException, DAOException {
-		
+
 		// Cria um cliente para teste
 		Cliente novoCliente = criaClienteParaTeste();
 		Boolean retorno = clienteDao.cadastrar(novoCliente);
 		// Verifica se o cliente foi cadastrado corretamente
 		Assertions.assertTrue(retorno);
-		
+
+		// Altera os dados do cliente
 		novoCliente.setNome("Leonardo Soares Alterado");
 		novoCliente.setCidade("Rio de Janeiro");
 		novoCliente.setEnd("Avenida Alterada");
@@ -151,9 +174,13 @@ public class ClienteDAOTest {
 		Cliente clienteAlterado = clienteDao.consultar(novoCliente.getCpf());
 		Assertions.assertNotNull(clienteAlterado);
 		Assertions.assertEquals("Leonardo Soares Alterado", clienteAlterado.getNome());
-		
 	}
 
+	/**
+	 * Testa a busca de todos os clientes cadastrados.
+	 * Garante que a lista de clientes é retornada corretamente e que a exclusão em
+	 * massa funciona.
+	 */
 	@Test
 	public void buscarTodosClientes() throws TipoChaveNaoEncontradaException, DAOException {
 		// Cria um cliente para teste
@@ -178,10 +205,12 @@ public class ClienteDAOTest {
 		assertTrue(listaClientes != null);
 		assertTrue(!listaClientes.isEmpty());
 
+		// Exclui todos os clientes após o teste
 		for (Cliente cliente : listaClientes) {
 			try {
 				clienteDao.excluir(cliente.getCpf());
 			} catch (DAOException e) {
+				// Exceção tratada para garantir que o teste continue mesmo em caso de erro
 			}
 		}
 	}
