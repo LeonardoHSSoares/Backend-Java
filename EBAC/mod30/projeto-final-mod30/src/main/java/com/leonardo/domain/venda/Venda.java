@@ -14,11 +14,15 @@ import com.leonardo.domain.produto.Produto;
 import annotation.ColunaTabela;
 import annotation.Tabela;
 import annotation.TipoChave;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Leonardo Soares
  *
  */
+@Getter
+@Setter
 @Tabela("TB_VENDA")
 public class Venda implements Persistence{
     public enum Status {
@@ -44,7 +48,7 @@ public class Venda implements Persistence{
     @ColunaTabela(dbName = "id_cliente_fk", setJavaName = "setIdClienteFk")
     private Cliente cliente;
 
-    // @ColunaTabela(dbName = "id", setJavaName = "setId")
+    @ColunaTabela(dbName = "id", setJavaName = "setId")
     private Set<ProdutoQuantidade> produtos;
 
     @ColunaTabela(dbName = "valor_total", setJavaName = "setValorTotal")
@@ -58,22 +62,6 @@ public class Venda implements Persistence{
 
     public Venda() {
         produtos = new HashSet<>();
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
     }
 
     public Set<ProdutoQuantidade> getProdutos() {

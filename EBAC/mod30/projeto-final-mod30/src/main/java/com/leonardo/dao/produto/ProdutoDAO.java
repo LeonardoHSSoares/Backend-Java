@@ -3,8 +3,11 @@ package com.leonardo.dao.produto;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import com.leonardo.dao.estoque.IEstoqueDAO;
 import com.leonardo.dao.generic.GenericDAO;
+import com.leonardo.domain.estoque.Estoque;
 import com.leonardo.domain.produto.Produto;
+import com.leonardo.exceptions.DAOException;
 
 /**
  * @author Leonardo Soares
@@ -78,15 +81,28 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
     @Override
     protected void setParametrosQueryAtualizacao(PreparedStatement stmUpdate, Produto entity) throws SQLException {
         stmUpdate.setString(1, entity.getCodigo());
-    stmUpdate.setString(2, entity.getNome());
-    stmUpdate.setString(3, entity.getDescricao());
-    stmUpdate.setBigDecimal(4, entity.getPreco());
-    stmUpdate.setInt(5, entity.getQuantidadeEstoque());
+        stmUpdate.setString(2, entity.getNome());
+        stmUpdate.setString(3, entity.getDescricao());
+        stmUpdate.setBigDecimal(4, entity.getPreco());
+        stmUpdate.setInt(5, entity.getQuantidadeEstoque());
     }
 
     @Override
     protected void setParametrosQuerySelect(PreparedStatement stmUpdate, String valor) throws SQLException {
         stmUpdate.setString(1, valor);
+    }
+
+    @Override
+    public void adicionarOuAtualizarEstoque(Produto produto, int quantidade) throws DAOException {
+
+        Estoque estoque = estoqueDAO.buscarPorProduto(produto.getCodigo());
+        if (estoque == null) {
+            estoque = new Estoque(produto, quantidade);
+            estoqueDAO.cadastrar(estoque);
+        } else {
+            int novaQuantidade = estoque.getQuantidade() + quantidade;
+            estoqueDAO.atualizarQuantidade(produto.getCodigo(), novaQuantidade);
+        }
     }
 
 }

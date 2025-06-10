@@ -2,6 +2,7 @@ package com.leonardo.dao.produto;
 
 import com.leonardo.dao.generic.IGenericDAO;
 import com.leonardo.domain.produto.Produto;
+import com.leonardo.exceptions.DAOException;
 
 /**
  * @author Leonardo Soares
@@ -14,6 +15,6 @@ import com.leonardo.domain.produto.Produto;
  */
 public interface IProdutoDAO extends IGenericDAO<Produto, String> {
     
-    
+    public void adicionarOuAtualizarEstoque(Produto produto, int quantidade) throws DAOException;
 
 }

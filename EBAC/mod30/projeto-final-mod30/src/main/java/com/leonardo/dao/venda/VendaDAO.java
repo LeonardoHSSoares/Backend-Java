@@ -12,8 +12,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.leonardo.dao.estoque.IEstoqueDAO;
 import com.leonardo.dao.generic.GenericDAO;
 import com.leonardo.domain.ProdutoQuantidade;
+import com.leonardo.domain.estoque.Estoque;
 import com.leonardo.domain.factory.ProdutoQuantidadeFactory;
 import com.leonardo.domain.factory.VendaFactory;
 import com.leonardo.domain.venda.Venda;
@@ -28,6 +30,13 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
  *
  */
 public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
+
+    private final IEstoqueDAO estoqueDAO;
+
+    public VendaDAO(IEstoqueDAO estoqueDAO) {
+        super();
+        this.estoqueDAO = estoqueDAO;
+    }
 
     @Override
     public Class<Venda> getTipoClasse() {
@@ -47,7 +56,7 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 
     @Override
     public void finalizarVenda(Venda venda) throws TipoChaveNaoEncontradaException, DAOException {
-
+        
         Connection connection = null;
         PreparedStatement stm = null;
         try {
@@ -57,6 +66,18 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
             stm.setString(1, Status.CONCLUIDA.name());
             stm.setLong(2, venda.getId());
             stm.executeUpdate();
+            for (ProdutoQuantidade pq : venda.getProdutos()) {
+            Estoque estoque = estoqueDAO.buscarPorProduto(pq.getProduto().getCodigo());
+            if (estoque != null) {
+                int novaQuantidade = estoque.getQuantidade() - pq.getQuantidade();
+                if (novaQuantidade < 0) {
+                    throw new DAOException("Estoque insuficiente para o produto: " + pq.getProduto().getCodigo(), null);
+                }
+                estoqueDAO.atualizarQuantidade(pq.getProduto().getCodigo(), novaQuantidade);
+            } else {
+                throw new DAOException("Produto não encontrado no estoque: " + pq.getProduto().getCodigo(), null);
+            }
+        }
 
         } catch (SQLException e) {
             throw new DAOException("ERRO ATUALIZANDO OBJETO ", e);

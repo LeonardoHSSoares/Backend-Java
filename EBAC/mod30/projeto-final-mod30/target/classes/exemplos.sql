@@ -21,6 +21,18 @@ create table tb_produto(
 	constraint pk_id_produto primary key(id)
 );
 
+CREATE TABLE TB_ESTOQUE (
+    ID BIGINT PRIMARY KEY,
+    CODIGO_PRODUTO VARCHAR(50) NOT NULL,
+    QUANTIDADE INT NOT NULL,
+    FOREIGN KEY (CODIGO_PRODUTO) REFERENCES TB_PRODUTO(CODIGO)
+);
+
+create sequence sq_estoque
+start 1
+increment 1
+owned by tb_estoque.id;
+
 create table tb_venda(
 	id bigint,
 	codigo varchar(10) not null,

@@ -8,6 +8,9 @@ import annotation.Tabela;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Leonardo Soares
+ */
 @Getter
 @Setter
 @Tabela("TB_ESTOQUE")
