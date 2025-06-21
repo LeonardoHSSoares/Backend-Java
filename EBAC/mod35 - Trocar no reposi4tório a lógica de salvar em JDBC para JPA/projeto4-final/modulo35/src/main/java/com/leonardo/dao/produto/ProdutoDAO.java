@@ -3,11 +3,8 @@ package com.leonardo.dao.produto;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.leonardo.dao.estoque.IEstoqueDAO;
 import com.leonardo.dao.generic.GenericDAO;
-import com.leonardo.domain.estoque.Estoque;
 import com.leonardo.domain.produto.Produto;
-import com.leonardo.exceptions.DAOException;
 
 /**
  * @author Leonardo Soares

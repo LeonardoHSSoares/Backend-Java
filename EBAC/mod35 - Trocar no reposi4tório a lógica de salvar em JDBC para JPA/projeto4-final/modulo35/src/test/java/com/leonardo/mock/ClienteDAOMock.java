@@ -2,41 +2,41 @@ package com.leonardo.mock;
 
 import java.util.Collection;
 
-import com.leonardo.dao.produto.IProdutoDAO;
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.dao.cliente.IClienteDAO;
+import com.leonardo.domain.cliente.Cliente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 
-public class ProdutoDAOMock implements IProdutoDAO{
+public class ClienteDAOMock implements IClienteDAO{
 
     @Override
-    public Boolean cadastrar(Produto entity) throws TipoChaveNaoEncontradaException, DAOException {
+    public Boolean cadastrar(Cliente entity) throws TipoChaveNaoEncontradaException, DAOException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'cadastrar'");
     }
 
     @Override
-    public void excluir(String valor) throws DAOException {
+    public void excluir(Long valor) throws DAOException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'excluir'");
     }
 
     @Override
-    public void alterar(Produto entity) throws TipoChaveNaoEncontradaException, DAOException {
+    public void alterar(Cliente entity) throws TipoChaveNaoEncontradaException, DAOException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'alterar'");
     }
 
     @Override
-    public Produto consultar(String valor) throws MaisDeUmRegistroException, TableException, DAOException {
+    public Cliente consultar(Long valor) throws MaisDeUmRegistroException, TableException, DAOException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'consultar'");
     }
 
     @Override
-    public Collection<Produto> buscarTodos() throws DAOException {
+    public Collection<Cliente> buscarTodos() throws DAOException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'buscarTodos'");
     }
