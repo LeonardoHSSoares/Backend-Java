@@ -2,14 +2,15 @@ package com.leonardo.mock;
 
 import java.util.Collection;
 
-import com.leonardo.dao.cliente.IClienteDAO;
-import com.leonardo.domain.cliente.Cliente;
+import com.leonardo.domain.Cliente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.gateway.IClienteGateway;
 
-public class ClienteDAOMock implements IClienteDAO{
+
+public class ClienteDAOMock implements IClienteGateway{
 
     @Override
     public Boolean cadastrar(Cliente entity) throws TipoChaveNaoEncontradaException, DAOException {

@@ -2,14 +2,14 @@ package com.leonardo.mock;
 
 import java.util.Collection;
 
-import com.leonardo.dao.produto.IProdutoDAO;
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.domain.Produto;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.gateway.IProdutoGateway;
 
-public class ProdutoDAOMock implements IProdutoDAO{
+public class ProdutoDAOMock implements IProdutoGateway{
 
     @Override
     public Boolean cadastrar(Produto entity) throws TipoChaveNaoEncontradaException, DAOException {

@@ -3,7 +3,7 @@ package com.leonardo.domain.factory;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.leonardo.domain.cliente.Cliente;
+import com.leonardo.domain.Cliente;
 
 public class ClienteFactory {
 

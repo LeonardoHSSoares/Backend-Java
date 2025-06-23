@@ -2,10 +2,9 @@ package com.leonardo.domain;
 
 import java.math.BigDecimal;
 
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.annotation.ColunaTabela;
+import com.leonardo.annotation.Tabela;
 
-import annotation.ColunaTabela;
-import annotation.Tabela;
 import lombok.Getter;
 import lombok.Setter;
 

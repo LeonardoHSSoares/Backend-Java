@@ -1,7 +1,7 @@
 package com.leonardo.service.produto;
 
-import com.leonardo.dao.produto.IProdutoDAO;
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.domain.Produto;
+import com.leonardo.gateway.IProdutoGateway;
 import com.leonardo.service.generic.GenericService;
 
 /**
@@ -11,7 +11,7 @@ import com.leonardo.service.generic.GenericService;
  */
 public class ProdutoService extends GenericService<Produto, String> implements IProdutoService {
 
-    public ProdutoService(IProdutoDAO produtoDAO) {
+    public ProdutoService(IProdutoGateway produtoDAO) {
         super(produtoDAO);
     }
 

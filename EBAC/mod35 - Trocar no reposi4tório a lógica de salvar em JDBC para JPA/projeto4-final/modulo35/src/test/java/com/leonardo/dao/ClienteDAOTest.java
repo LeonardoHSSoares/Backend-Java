@@ -8,13 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import com.github.javafaker.Faker;
-import com.leonardo.dao.cliente.ClienteDAO;
-import com.leonardo.dao.cliente.IClienteDAO;
-import com.leonardo.domain.cliente.Cliente;
+import com.leonardo.domain.Cliente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.gateway.IClienteGateway;
+import com.leonardo.infrastructure.dao.cliente.ClienteDAO;
+
 
 /**
  * @author Leonardo Soares
@@ -31,7 +32,7 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 public class ClienteDAOTest {
 
 	// Instância do DAO de Cliente utilizada nos testes
-	private final IClienteDAO clienteDao;
+	private final IClienteGateway clienteDao;
 
 	/**
 	 * Construtor que inicializa o DAO de Cliente.

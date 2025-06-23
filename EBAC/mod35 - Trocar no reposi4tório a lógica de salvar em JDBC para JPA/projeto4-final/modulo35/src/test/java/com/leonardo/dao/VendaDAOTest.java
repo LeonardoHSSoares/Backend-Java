@@ -17,29 +17,29 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.leonardo.dao.cliente.ClienteDAO;
-import com.leonardo.dao.cliente.IClienteDAO;
-import com.leonardo.dao.produto.IProdutoDAO;
-import com.leonardo.dao.produto.ProdutoDAO;
-import com.leonardo.dao.venda.IVendaDAO;
-import com.leonardo.dao.venda.VendaDAO;
-import com.leonardo.domain.cliente.Cliente;
-import com.leonardo.domain.factory.jdbc.ConnectionFactory;
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.domain.Cliente;
+import com.leonardo.domain.Produto;
 import com.leonardo.domain.venda.Venda;
 import com.leonardo.domain.venda.Venda.Status;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.gateway.IClienteGateway;
+import com.leonardo.gateway.IProdutoGateway;
+import com.leonardo.infrastructure.dao.cliente.ClienteDAO;
+import com.leonardo.infrastructure.dao.produto.ProdutoDAO;
+import com.leonardo.infrastructure.dao.venda.IVendaDAO;
+import com.leonardo.infrastructure.dao.venda.VendaDAO;
+import com.leonardo.infrastructure.jdbc.ConnectionFactory;
 
 public class VendaDAOTest {
 
     private IVendaDAO vendaDao;
 
-    private IClienteDAO clienteDao;
+    private IClienteGateway clienteDao;
 
-    private IProdutoDAO produtoDao;
+    private IProdutoGateway produtoDao;
 
     private Cliente cliente;
 

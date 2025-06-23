@@ -3,8 +3,8 @@ package com.leonardo.domain.factory;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.leonardo.domain.Produto;
 import com.leonardo.domain.ProdutoQuantidade;
-import com.leonardo.domain.produto.Produto;
 
 /**
  * @author Leonardo Soares

@@ -6,14 +6,14 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import com.leonardo.dao.Persistence;
+import com.leonardo.annotation.ColunaTabela;
+import com.leonardo.annotation.Tabela;
+import com.leonardo.annotation.TipoChave;
+import com.leonardo.domain.Cliente;
+import com.leonardo.domain.Produto;
 import com.leonardo.domain.ProdutoQuantidade;
-import com.leonardo.domain.cliente.Cliente;
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.infrastructure.dao.Persistence;
 
-import annotation.ColunaTabela;
-import annotation.Tabela;
-import annotation.TipoChave;
 import lombok.Getter;
 import lombok.Setter;
 

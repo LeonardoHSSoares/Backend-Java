@@ -3,9 +3,9 @@ package com.leonardo.service.generic;
 import java.io.Serializable;
 import java.util.Collection;
 
-import com.leonardo.dao.Persistence;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.infrastructure.dao.Persistence;
 
 
 /**

@@ -1,6 +1,6 @@
 package com.leonardo.service.cliente;
 
-import com.leonardo.domain.cliente.Cliente;
+import com.leonardo.domain.Cliente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.service.generic.IGenericService; 
 

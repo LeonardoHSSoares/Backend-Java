@@ -3,7 +3,7 @@ package com.leonardo.domain.factory;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.leonardo.domain.produto.Produto;
+import com.leonardo.domain.Produto;
 
 /**
  * @author Leonardo Soares
@@ -18,6 +18,7 @@ public class ProdutoFactory {
         prod.setNome(rs.getString("NOME"));
         prod.setDescricao(rs.getString("DESCRICAO"));
         prod.setPreco(rs.getBigDecimal("VALOR"));
+        prod.setQuantidadeEstoque(rs.getInt("QUANTIDADE_ESTOQUE"));
         return prod;
     }
 }

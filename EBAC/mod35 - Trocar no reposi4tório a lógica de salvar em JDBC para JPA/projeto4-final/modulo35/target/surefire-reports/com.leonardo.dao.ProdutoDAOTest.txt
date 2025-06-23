@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.leonardo.dao.ProdutoDAOTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.058 s <<< FAILURE! -- in com.leonardo.dao.ProdutoDAOTest
+com.leonardo.dao.ProdutoDAOTest.alterarProduto -- Time elapsed: 0.065 s <<< ERROR!
+com.leonardo.exceptions.DAOException: ERRO ALTERANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.alterar(GenericDAO.java:147)
+	at com.leonardo.dao.ProdutoDAOTest.alterarProduto(ProdutoDAOTest.java:181)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: Nenhum valor especificado para parâmetro 6.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:407)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:358)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.alterar(GenericDAO.java:145)
+	... 4 more
+
+com.leonardo.dao.ProdutoDAOTest.buscarTodos -- Time elapsed: 0.109 s <<< ERROR!
+com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.buscarTodos(ProdutoDAOTest.java:212)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_codigo_produto"
+  Detalhe: Chave (codigo)=(0d6927b5-) já existe.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+

@@ -3,12 +3,13 @@ package com.leonardo.service.generic;
 import java.io.Serializable;
 import java.util.Collection;
 
-import com.leonardo.dao.Persistence;
-import com.leonardo.dao.generic.IGenericDAO;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.gateway.IGenericGateway;
+import com.leonardo.infrastructure.dao.Persistence;
+
 
 /**
  * @author Leonardo Soares
@@ -23,9 +24,9 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 public abstract class GenericService<T extends Persistence, E extends Serializable> 
 	implements IGenericService<T, E> {
 	
-	protected IGenericDAO<T,E> dao;
+	protected IGenericGateway<T,E> dao;
 	
-	public GenericService(IGenericDAO<T,E> dao) {
+	public GenericService(IGenericGateway<T,E> dao) {
 		this.dao = dao;
 	}
 

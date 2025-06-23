@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: com.leonardo.dao.ProdutoServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.505 s <<< FAILURE! -- in com.leonardo.dao.ProdutoServiceTest
+com.leonardo.dao.ProdutoServiceTest.salvar -- Time elapsed: 0.049 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.service.generic.GenericService.cadastrar(GenericService.java:35)
+	at com.leonardo.dao.ProdutoServiceTest.salvar(ProdutoServiceTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.leonardo.dao.ProdutoServiceTest.alterarCliente -- Time elapsed: 0.040 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryAtualizacao(ProdutoDAO.java:85)
+	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryAtualizacao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.alterar(GenericDAO.java:144)
+	at com.leonardo.service.generic.GenericService.alterar(GenericService.java:45)
+	at com.leonardo.dao.ProdutoServiceTest.alterarCliente(ProdutoServiceTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.leonardo.dao.ProdutoServiceTest.pesquisar -- Time elapsed: 0.111 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:300)
+	at com.leonardo.dao.ProdutoServiceTest.pesquisar(ProdutoServiceTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
