@@ -8,7 +8,7 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IGenericGateway;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
 
 /**
@@ -21,7 +21,7 @@ import com.leonardo.infrastructure.dao.Persistence;
  *
  * Ela utiliza um DAO genérico (IGenericDAO) para realizar as operações de persistência.
  */
-public abstract class GenericService<T extends Persistence, E extends Serializable> 
+public abstract class GenericService<T extends Persistente, E extends Serializable> 
 	implements IGenericService<T, E> {
 	
 	protected IGenericGateway<T,E> dao;

@@ -1,6 +1,6 @@
 package com.leonardo.infrastructure.dao.venda;
 
-import com.leonardo.domain.venda.Venda;
+import com.leonardo.domain.Venda;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IGenericGateway;

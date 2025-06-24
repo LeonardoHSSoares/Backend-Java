@@ -16,7 +16,7 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IProdutoGateway;
-import com.leonardo.infrastructure.dao.produto.ProdutoDAO;
+import com.leonardo.infrastructure.dao.ProdutoDAO;
 
 /**
  * @author Leonardo Soares

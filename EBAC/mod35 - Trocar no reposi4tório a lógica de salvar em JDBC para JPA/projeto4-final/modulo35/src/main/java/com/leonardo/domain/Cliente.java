@@ -3,7 +3,7 @@ package com.leonardo.domain;
 import com.leonardo.annotation.ColunaTabela;
 import com.leonardo.annotation.Tabela;
 import com.leonardo.annotation.TipoChave;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,7 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Tabela("TB_CLIENTE")
-public class Cliente implements Persistence {
+public class Cliente implements Persistente {
 	
 	@ColunaTabela(dbName = "id", setJavaName = "setId")
 	private Long id;

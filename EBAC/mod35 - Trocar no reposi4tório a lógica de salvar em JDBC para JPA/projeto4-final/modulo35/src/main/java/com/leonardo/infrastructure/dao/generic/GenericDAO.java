@@ -17,7 +17,7 @@ import java.util.List;
 import com.leonardo.annotation.ColunaTabela;
 import com.leonardo.annotation.Tabela;
 import com.leonardo.annotation.TipoChave;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
@@ -39,7 +39,7 @@ import com.leonardo.infrastructure.jdbc.ConnectionFactory;
  *
  */
 
-public abstract class GenericDAO<T extends Persistence, E extends Serializable> implements IGenericGateway<T, E> {
+public abstract class GenericDAO<T extends Persistente, E extends Serializable> implements IGenericGateway<T, E> {
 
     public abstract Class<T> getTipoClasse();
 
@@ -101,7 +101,7 @@ public abstract class GenericDAO<T extends Persistence, E extends Serializable> 
             if (rowsAffected > 0) {
                 try (ResultSet rs = stm.getGeneratedKeys()) {
                     if (rs.next()) {
-                        Persistence per = (Persistence) entity;
+                        Persistente per = (Persistente) entity;
                         per.setId(rs.getLong(1));
                     }
                 }

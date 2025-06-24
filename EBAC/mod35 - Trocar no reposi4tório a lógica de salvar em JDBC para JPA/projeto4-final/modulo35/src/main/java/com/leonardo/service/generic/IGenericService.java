@@ -5,7 +5,7 @@ import java.util.Collection;
 
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
 
 /**
@@ -16,7 +16,7 @@ import com.leonardo.infrastructure.dao.Persistence;
  * Esta interface é responsável por fornecer operações básicas de CRUD (Create, Read, Update, Delete)
  * para entidades persistentes.
  */
-public interface IGenericService <T extends Persistence, E extends Serializable> {
+public interface IGenericService <T extends Persistente, E extends Serializable> {
 	
 	/**
      * Método para cadastrar novos registro no banco de dados

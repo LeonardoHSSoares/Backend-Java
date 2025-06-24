@@ -1,4 +1,4 @@
-package com.leonardo.infrastructure.dao.produto;
+package com.leonardo.infrastructure.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

@@ -12,7 +12,7 @@ import com.leonardo.domain.Produto;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IProdutoGateway;
-import com.leonardo.infrastructure.dao.produto.ProdutoDAO;
+import com.leonardo.infrastructure.dao.ProdutoDAO;
 import com.leonardo.service.produto.IProdutoService;
 import com.leonardo.service.produto.ProdutoService;
 

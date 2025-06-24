@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.leonardo.domain.Cliente;
-import com.leonardo.domain.venda.Venda;
-import com.leonardo.domain.venda.Venda.Status;
+import com.leonardo.domain.Venda;
+import com.leonardo.domain.Venda.Status;
 
 /**
  * @author Leonardo Soares

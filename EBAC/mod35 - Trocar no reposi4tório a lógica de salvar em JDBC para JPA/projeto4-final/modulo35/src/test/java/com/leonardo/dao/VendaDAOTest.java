@@ -19,18 +19,18 @@ import org.junit.jupiter.api.Test;
 
 import com.leonardo.domain.Cliente;
 import com.leonardo.domain.Produto;
-import com.leonardo.domain.venda.Venda;
-import com.leonardo.domain.venda.Venda.Status;
+import com.leonardo.domain.Venda;
+import com.leonardo.domain.Venda.Status;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IClienteGateway;
 import com.leonardo.gateway.IProdutoGateway;
-import com.leonardo.infrastructure.dao.cliente.ClienteDAO;
-import com.leonardo.infrastructure.dao.produto.ProdutoDAO;
+import com.leonardo.infrastructure.dao.ClienteDAO;
+import com.leonardo.infrastructure.dao.ProdutoDAO;
+import com.leonardo.infrastructure.dao.VendaDAO;
 import com.leonardo.infrastructure.dao.venda.IVendaDAO;
-import com.leonardo.infrastructure.dao.venda.VendaDAO;
 import com.leonardo.infrastructure.jdbc.ConnectionFactory;
 
 public class VendaDAOTest {

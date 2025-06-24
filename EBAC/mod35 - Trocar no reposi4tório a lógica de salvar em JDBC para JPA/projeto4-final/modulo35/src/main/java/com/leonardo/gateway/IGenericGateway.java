@@ -7,9 +7,9 @@ import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
-public interface IGenericGateway<T extends Persistence, E extends Serializable> {
+public interface IGenericGateway<T extends Persistente, E extends Serializable> {
 
     /**
      * Método para cadastrar novos registro no banco de dados

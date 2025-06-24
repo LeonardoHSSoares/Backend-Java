@@ -14,7 +14,7 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IClienteGateway;
-import com.leonardo.infrastructure.dao.cliente.ClienteDAO;
+import com.leonardo.infrastructure.dao.ClienteDAO;
 
 
 /**

@@ -8,7 +8,7 @@ import com.leonardo.domain.Cliente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IClienteGateway;
-import com.leonardo.infrastructure.dao.cliente.ClienteDAO;
+import com.leonardo.infrastructure.dao.ClienteDAO;
 import com.leonardo.service.cliente.ClienteService;
 import com.leonardo.service.cliente.IClienteService;
 
@@ -38,8 +38,9 @@ public class ClienteServiceTest {
 	
 	@Test
 	public void pesquisarCliente() throws DAOException {
+		Cliente cliente = new Cliente();
 		Cliente clienteConsultado = clienteService.buscarPorID(cliente.getCpf());
-		// Assertions.assertNotNull(clienteConsultado);
+		// Assertions.assertTrue(clienteConsultado != null);
 	}
 	
 	@Test

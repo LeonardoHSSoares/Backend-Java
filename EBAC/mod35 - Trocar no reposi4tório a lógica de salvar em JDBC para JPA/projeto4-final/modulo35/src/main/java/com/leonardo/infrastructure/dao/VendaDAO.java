@@ -1,4 +1,4 @@
-package com.leonardo.infrastructure.dao.venda;
+package com.leonardo.infrastructure.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,16 +12,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.leonardo.infrastructure.dao.generic.GenericDAO;
 import com.leonardo.domain.ProdutoQuantidade;
+import com.leonardo.domain.Venda;
+import com.leonardo.domain.Venda.Status;
 import com.leonardo.domain.factory.ProdutoQuantidadeFactory;
 import com.leonardo.domain.factory.VendaFactory;
-import com.leonardo.domain.venda.Venda;
-import com.leonardo.domain.venda.Venda.Status;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
+import com.leonardo.infrastructure.dao.generic.GenericDAO;
+import com.leonardo.infrastructure.dao.venda.IVendaDAO;
 
 /**
  * @author Leonardo Soares

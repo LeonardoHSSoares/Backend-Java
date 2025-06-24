@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import com.leonardo.annotation.ColunaTabela;
 import com.leonardo.annotation.Tabela;
 import com.leonardo.annotation.TipoChave;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +23,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Tabela("TB_PRODUTO")
-public class Produto implements Persistence{
+public class Produto implements Persistente{
 
     @ColunaTabela(dbName = "id", setJavaName = "setId")
     private Long id;

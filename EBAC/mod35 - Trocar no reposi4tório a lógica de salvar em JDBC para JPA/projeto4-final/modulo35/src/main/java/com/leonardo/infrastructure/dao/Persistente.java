@@ -5,7 +5,7 @@ package com.leonardo.infrastructure.dao;
  *
  */
 
-public interface Persistence {
+public interface Persistente {
 
     public Long getId();
 

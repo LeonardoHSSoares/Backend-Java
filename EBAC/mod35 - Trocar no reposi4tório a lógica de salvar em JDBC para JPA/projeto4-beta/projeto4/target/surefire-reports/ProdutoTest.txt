@@ -1,58 +1,40 @@
 -------------------------------------------------------------------------------
 Test set: ProdutoTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.428 s <<< FAILURE! - in ProdutoTest
-consultarProdutoTest  Time elapsed: 1.322 s  <<< ERROR!
-javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.consultarProdutoTest(ProdutoTest.java:55)
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.consultarProdutoTest(ProdutoTest.java:55)
-Caused by: org.postgresql.util.PSQLException: 
-ERRO: coluna produto0_.ativo não existe
-  Posição: 34
-	at ProdutoTest.consultarProdutoTest(ProdutoTest.java:55)
+Tests run: 5, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 1.402 s <<< FAILURE! - in ProdutoTest
+consultarProdutoTest  Time elapsed: 1.29 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not <null>
+	at ProdutoTest.consultarProdutoTest(ProdutoTest.java:56)
 
-atualizarProdutoTest  Time elapsed: 0.027 s  <<< ERROR!
-javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.atualizarProdutoTest(ProdutoTest.java:39)
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.atualizarProdutoTest(ProdutoTest.java:39)
-Caused by: org.postgresql.util.PSQLException: 
-ERRO: coluna produto0_.ativo não existe
-  Posição: 34
-	at ProdutoTest.atualizarProdutoTest(ProdutoTest.java:39)
+atualizarProdutoTest  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not <null>
+	at ProdutoTest.atualizarProdutoTest(ProdutoTest.java:40)
 
-consultarTodosProdutosTest  Time elapsed: 0.038 s  <<< ERROR!
-javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.consultarTodosProdutosTest(ProdutoTest.java:78)
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at ProdutoTest.consultarTodosProdutosTest(ProdutoTest.java:78)
-Caused by: org.postgresql.util.PSQLException: 
-ERRO: coluna produto0_.ativo não existe
-  Posição: 32
-	at ProdutoTest.consultarTodosProdutosTest(ProdutoTest.java:78)
+consultarTodosProdutosTest  Time elapsed: 0.061 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+	at ProdutoTest.consultarTodosProdutosTest(ProdutoTest.java:80)
 
-excluirProdutoTest  Time elapsed: 0.027 s  <<< ERROR!
+excluirProdutoTest  Time elapsed: 0.035 s  <<< ERROR!
 javax.persistence.RollbackException: Error while committing the transaction
 	at ProdutoTest.excluirProdutoTest(ProdutoTest.java:67)
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at ProdutoTest.excluirProdutoTest(ProdutoTest.java:67)
-Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at ProdutoTest.excluirProdutoTest(ProdutoTest.java:67)
 Caused by: org.postgresql.util.PSQLException: 
-ERRO: coluna "ativo" da relação "tb_produto" não existe
-  Posição: 25
+ERRO: o valor nulo na coluna "codigo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (132, null, Smartphone Motorola, null, 500.00, null, t).
 	at ProdutoTest.excluirProdutoTest(ProdutoTest.java:67)
 
-cadastrarProdutoTest  Time elapsed: 0.004 s  <<< ERROR!
+cadastrarProdutoTest  Time elapsed: 0.005 s  <<< ERROR!
 javax.persistence.RollbackException: Error while committing the transaction
 	at ProdutoTest.cadastrarProdutoTest(ProdutoTest.java:28)
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at ProdutoTest.cadastrarProdutoTest(ProdutoTest.java:28)
-Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at ProdutoTest.cadastrarProdutoTest(ProdutoTest.java:28)
 Caused by: org.postgresql.util.PSQLException: 
-ERRO: coluna "ativo" da relação "tb_produto" não existe
-  Posição: 25
+ERRO: o valor nulo na coluna "codigo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (133, null, Computador Desktop Dell, null, 1500.00, null, t).
 	at ProdutoTest.cadastrarProdutoTest(ProdutoTest.java:28)
 

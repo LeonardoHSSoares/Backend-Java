@@ -1,4 +1,4 @@
-package com.leonardo.domain.venda;
+package com.leonardo.domain;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -9,10 +9,7 @@ import java.util.Set;
 import com.leonardo.annotation.ColunaTabela;
 import com.leonardo.annotation.Tabela;
 import com.leonardo.annotation.TipoChave;
-import com.leonardo.domain.Cliente;
-import com.leonardo.domain.Produto;
-import com.leonardo.domain.ProdutoQuantidade;
-import com.leonardo.infrastructure.dao.Persistence;
+import com.leonardo.infrastructure.dao.Persistente;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Tabela("TB_VENDA")
-public class Venda implements Persistence{
+public class Venda implements Persistente{
     public enum Status {
         INICIADA, CONCLUIDA, CANCELADA;
 
