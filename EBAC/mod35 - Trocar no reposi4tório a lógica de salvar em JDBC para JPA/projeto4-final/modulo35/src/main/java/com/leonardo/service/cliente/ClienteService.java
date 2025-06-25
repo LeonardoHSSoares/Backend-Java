@@ -5,7 +5,7 @@ import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.gateway.IClienteGateway;
-import com.leonardo.service.generic.GenericService;
+import com.leonardo.service.GenericService;
 
 
 /**

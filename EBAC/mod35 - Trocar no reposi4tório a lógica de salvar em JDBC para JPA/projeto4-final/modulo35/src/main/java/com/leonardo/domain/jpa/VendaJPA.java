@@ -26,6 +26,13 @@ import com.leonardo.infrastructure.dao.Persistente;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Leonardo Soares
+ *
+ *         Classe VendaJPA que representa a entidade Venda no contexto JPA.
+ *         Esta classe é responsável por mapear os atributos da venda para as
+ *         colunas da tabela TB_VENDA no banco de dados.
+ */
 @Getter
 @Setter
 @Entity

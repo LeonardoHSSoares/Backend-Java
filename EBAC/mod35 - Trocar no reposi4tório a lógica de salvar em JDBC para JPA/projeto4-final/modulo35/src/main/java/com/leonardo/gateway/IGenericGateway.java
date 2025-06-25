@@ -9,6 +9,13 @@ import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.infrastructure.dao.Persistente;
 
+/**
+ * Interface genérica para operações de acesso a dados (DAO) que define os métodos
+ * básicos de CRUD (Create, Read, Update, Delete) para entidades persistentes.
+ *
+ * @param <T> Tipo da entidade que estende Persistente.
+ * @param <E> Tipo da chave única da entidade, que deve ser serializável.
+ */
 public interface IGenericGateway<T extends Persistente, E extends Serializable> {
 
     /**

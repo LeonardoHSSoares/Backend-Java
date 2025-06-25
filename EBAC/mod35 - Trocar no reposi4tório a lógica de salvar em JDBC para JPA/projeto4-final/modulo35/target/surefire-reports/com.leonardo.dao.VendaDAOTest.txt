@@ -1,391 +1,125 @@
 -------------------------------------------------------------------------------
 Test set: com.leonardo.dao.VendaDAOTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 1.083 s <<< FAILURE! -- in com.leonardo.dao.VendaDAOTest
-com.leonardo.dao.VendaDAOTest.removerApenasUmProduto -- Time elapsed: 0.378 s <<< ERROR!
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 1.967 s <<< FAILURE! -- in com.leonardo.dao.VendaDAOTest
+com.leonardo.dao.VendaDAOTest.removerApenasUmProduto -- Time elapsed: 0.171 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
-	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
-	at com.leonardo.infrastructure.dao.produto.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
 	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
 	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
 	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
 
-com.leonardo.dao.VendaDAOTest.salvarVendaMesmoCodigoExistente -- Time elapsed: 0.048 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.salvarVendaMesmoCodigoExistente -- Time elapsed: 0.274 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.finalizarVenda -- Time elapsed: 0.046 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.finalizarVenda -- Time elapsed: 0.160 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.cancelarVenda -- Time elapsed: 0.043 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.cancelarVenda -- Time elapsed: 0.151 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.salvar -- Time elapsed: 0.043 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.salvar -- Time elapsed: 0.172 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.tentarAdicionarProdutosVendaFinalizada -- Time elapsed: 0.046 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.tentarAdicionarProdutosVendaFinalizada -- Time elapsed: 0.272 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.removerTodosProdutos -- Time elapsed: 0.047 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.removerTodosProdutos -- Time elapsed: 0.153 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.adicionarMaisProdutosDiferentes -- Time elapsed: 0.046 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.adicionarMaisProdutosDiferentes -- Time elapsed: 0.150 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.adicionarMaisProdutosDoMesmo -- Time elapsed: 0.041 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.adicionarMaisProdutosDoMesmo -- Time elapsed: 0.154 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.removerProduto -- Time elapsed: 0.149 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.removerProduto -- Time elapsed: 0.148 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 
-com.leonardo.dao.VendaDAOTest.pesquisar -- Time elapsed: 0.150 s <<< ERROR!
-com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.VendaDAOTest.cadastrarCliente(VendaDAOTest.java:306)
-	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:56)
+com.leonardo.dao.VendaDAOTest.pesquisar -- Time elapsed: 0.155 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.leonardo.domain.Produto.getQuantidadeEstoque()" is null
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:71)
+	at com.leonardo.infrastructure.dao.ProdutoDAO.setParametrosQueryInsercao(ProdutoDAO.java:22)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:98)
+	at com.leonardo.dao.VendaDAOTest.cadastrarProduto(VendaDAOTest.java:293)
+	at com.leonardo.dao.VendaDAOTest.init(VendaDAOTest.java:57)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: com.leonardo.exceptions.DAOException: ERRO EXLUINDO OBJETO 
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:338)
-		at com.leonardo.dao.VendaDAOTest.excluirVendas(VendaDAOTest.java:322)
-		at com.leonardo.dao.VendaDAOTest.end(VendaDAOTest.java:62)
-		... 3 more
-	Caused by: org.postgresql.util.PSQLException: ERRO: relação "tb_produto_quantidade" não existe
-  Posição: 13
-		at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-		at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-		at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-		at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-		at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-		at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-		at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-		at com.leonardo.dao.VendaDAOTest.executeDelete(VendaDAOTest.java:335)
-		... 5 more
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_cpf_cliente"
-  Detalhe: Chave (cpf)=(12312312312) já existe.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
-	... 5 more
 

@@ -2,7 +2,7 @@ package com.leonardo.service.produto;
 
 import com.leonardo.domain.Produto;
 import com.leonardo.gateway.IProdutoGateway;
-import com.leonardo.service.generic.GenericService;
+import com.leonardo.service.GenericService;
 
 /**
  * @author Leonardo Soares

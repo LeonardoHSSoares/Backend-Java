@@ -28,9 +28,9 @@ import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.gateway.IClienteGateway;
 import com.leonardo.gateway.IProdutoGateway;
 import com.leonardo.infrastructure.dao.ClienteDAO;
+import com.leonardo.infrastructure.dao.IVendaDAO;
 import com.leonardo.infrastructure.dao.ProdutoDAO;
 import com.leonardo.infrastructure.dao.VendaDAO;
-import com.leonardo.infrastructure.dao.venda.IVendaDAO;
 import com.leonardo.infrastructure.jdbc.ConnectionFactory;
 
 public class VendaDAOTest {

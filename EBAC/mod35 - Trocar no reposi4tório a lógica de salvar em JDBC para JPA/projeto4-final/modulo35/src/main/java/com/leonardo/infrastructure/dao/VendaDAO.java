@@ -22,7 +22,6 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.infrastructure.dao.generic.GenericDAO;
-import com.leonardo.infrastructure.dao.venda.IVendaDAO;
 
 /**
  * @author Leonardo Soares

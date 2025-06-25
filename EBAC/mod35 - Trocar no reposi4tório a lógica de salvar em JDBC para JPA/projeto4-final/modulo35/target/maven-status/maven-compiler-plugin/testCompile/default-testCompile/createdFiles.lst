@@ -1,0 +1,11 @@
+com\leonardo\mock\ClienteDAOMock.class
+com\leonardo\jpa\ClienteJPADAOTest.class
+com\leonardo\dao\VendaDAOTest.class
+com\leonardo\dao\ClienteDAOTest.class
+com\leonardo\dao\ProdutoDAOTest.class
+com\leonardo\service\ClienteServiceTest.class
+com\leonardo\AllTests.class
+com\leonardo\jpa\ProdutoJPADAOTest.class
+com\leonardo\mock\ProdutoDAOMock.class
+com\leonardo\jpa\VendaJpaDAOTest.class
+com\leonardo\service\ProdutoServiceTest.class

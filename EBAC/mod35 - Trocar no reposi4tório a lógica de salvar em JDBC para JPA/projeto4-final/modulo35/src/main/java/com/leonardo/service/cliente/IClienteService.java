@@ -2,7 +2,7 @@ package com.leonardo.service.cliente;
 
 import com.leonardo.domain.Cliente;
 import com.leonardo.exceptions.DAOException;
-import com.leonardo.service.generic.IGenericService; 
+import com.leonardo.service.IGenericService; 
 
 /**
  * @author Leonardo Soares

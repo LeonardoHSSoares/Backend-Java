@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.leonardo.dao.ProdutoDAOTest" time="1.058" tests="5" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.leonardo.dao.ProdutoDAOTest" time="0.186" tests="5" errors="5" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\test-classes;D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\classes;C:\Users\masco\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\masco\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\masco\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\masco\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\masco\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\masco\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\masco\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\masco\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\masco\.m2\repository\org\postgresql\postgresql\42.7.6\postgresql-42.7.6.jar;C:\Users\masco\.m2\repository\org\checkerframework\checker-qual\3.49.3\checker-qual-3.49.3.jar;C:\Users\masco\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;"/>
+    <property name="java.class.path" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\test-classes;D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\classes;C:\Users\masco\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\masco\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\masco\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\masco\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\masco\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\masco\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\masco\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\masco\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\masco\.m2\repository\org\postgresql\postgresql\42.7.6\postgresql-42.7.6.jar;C:\Users\masco\.m2\repository\org\checkerframework\checker-qual\3.49.3\checker-qual-3.49.3.jar;C:\Users\masco\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\masco\.m2\repository\org\hibernate\hibernate-entitymanager\5.6.15.Final\hibernate-entitymanager-5.6.15.Final.jar;C:\Users\masco\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\masco\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\masco\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\masco\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\masco\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\masco\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\masco\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\masco\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\masco\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\masco\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\masco\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\masco\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\masco\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\masco\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\masco\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -12,29 +12,28 @@
     <property name="user.timezone" value="America/Sao_Paulo"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="21"/>
-    <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Users\masco\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire6851181335547990054\surefirebooter-20250623162319513_3.jar C:\Users\masco\AppData\Local\Temp\surefire6851181335547990054 2025-06-23T16-23-19_376-jvmRun1 surefire-20250623162319513_1tmp surefire_0-20250623162319513_2tmp"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin"/>
+    <property name="sun.java.command" value="C:\Users\masco\AppData\Local\Temp\surefire3579434692560582472\surefirebooter-20250624224049397_3.jar C:\Users\masco\AppData\Local\Temp\surefire3579434692560582472 2025-06-24T22-40-49_256-jvmRun1 surefire-20250624224049397_1tmp surefire_0-20250624224049397_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="com.leonardo.dao.ProdutoDAOTest"/>
-    <property name="surefire.test.class.path" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\test-classes;D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\classes;C:\Users\masco\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\masco\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\masco\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\masco\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\masco\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\masco\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\masco\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\masco\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\masco\.m2\repository\org\postgresql\postgresql\42.7.6\postgresql-42.7.6.jar;C:\Users\masco\.m2\repository\org\checkerframework\checker-qual\3.49.3\checker-qual-3.49.3.jar;C:\Users\masco\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;"/>
+    <property name="surefire.test.class.path" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\test-classes;D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\classes;C:\Users\masco\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\masco\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\masco\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\masco\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\masco\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\masco\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\masco\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\masco\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\masco\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\masco\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\masco\.m2\repository\org\postgresql\postgresql\42.7.6\postgresql-42.7.6.jar;C:\Users\masco\.m2\repository\org\checkerframework\checker-qual\3.49.3\checker-qual-3.49.3.jar;C:\Users\masco\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\masco\.m2\repository\org\hibernate\hibernate-entitymanager\5.6.15.Final\hibernate-entitymanager-5.6.15.Final.jar;C:\Users\masco\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\masco\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\masco\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\masco\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\masco\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\masco\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\masco\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\masco\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\masco\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\masco\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\masco\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\masco\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\masco\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\masco\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\masco\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\masco"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2025-01-21"/>
-    <property name="java.home" value="C:\Users\masco\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire6851181335547990054\surefirebooter-20250623162319513_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\masco\AppData\Local\Temp\surefire3579434692560582472\surefirebooter-20250624224049397_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.6+7-LTS"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
     <property name="user.name" value="masco"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
@@ -42,54 +41,33 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Temurin-21.0.6+7"/>
-    <property name="maven.ext.class.path" value="C:\Users\masco\.vscode\extensions\oracle.oracle-java-24.0.0\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
     <property name="localRepository" value="C:\Users\masco\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\masco\AppData\Local\Temp\"/>
-    <property name="java.version" value="21.0.6"/>
+    <property name="java.version" value="21.0.7"/>
     <property name="user.dir" value="D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Users\masco\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\masco\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\Users\masco\AppData\Local\Microsoft\WindowsApps;C:\Users\masco\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.library.path" value="C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\masco\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\masco\bin;C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\gradle\latest\bin;C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin;C:\Users\masco\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet;C:\Program Files\Git\cmd;C:\Users\masco\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\Users\masco\AppData\Local\Microsoft\WindowsApps;C:\Users\masco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\masco\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
-    <property name="java.vm.version" value="21.0.6+7-LTS"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="excluirProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.58"/>
-  <testcase name="pesquisarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.136"/>
-  <testcase name="alterarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.065">
-    <error message="ERRO ALTERANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO ALTERANDO OBJETO 
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.alterar(GenericDAO.java:147)
-	at com.leonardo.dao.ProdutoDAOTest.alterarProduto(ProdutoDAOTest.java:181)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.postgresql.util.PSQLException: Nenhum valor especificado para parâmetro 6.
-	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:407)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:358)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-	at com.leonardo.infrastructure.dao.generic.GenericDAO.alterar(GenericDAO.java:145)
-	... 4 more
-]]></error>
-  </testcase>
-  <testcase name="buscarTodos" classname="com.leonardo.dao.ProdutoDAOTest" time="0.109">
+  <testcase name="excluirProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.02">
     <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
 	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
-	at com.leonardo.dao.ProdutoDAOTest.buscarTodos(ProdutoDAOTest.java:212)
+	at com.leonardo.dao.ProdutoDAOTest.excluirProduto(ProdutoDAOTest.java:143)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viola a restrição de unicidade "uk_codigo_produto"
-  Detalhe: Chave (codigo)=(0d6927b5-) já existe.
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (134, 0b80b66b-, Sleek Aluminum Bag, Neque veniam rem molestiae animi et qui aperiam et amet fugit ve..., 13.34, 1, null).
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
@@ -101,5 +79,184 @@ Caused by: org.postgresql.util.PSQLException: ERRO: duplicar valor da chave viol
 	... 4 more
 ]]></error>
   </testcase>
-  <testcase name="cadastrarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.135"/>
+  <testcase name="excluirProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.005">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.excluirProduto(ProdutoDAOTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (139, 9a5406bb-, Mediocre Wooden Shoes, Vel fugiat aut expedita tenetur molestias eos voluptates quibusd..., 593.58, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="pesquisarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.054">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.pesquisarProduto(ProdutoDAOTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (135, 9f809e32-, Fantastic Marble Car, Veniam numquam temporibus voluptatem quis dolores laborum suscip..., 121.79, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="pesquisarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.042">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.pesquisarProduto(ProdutoDAOTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (140, 58a269ae-, Heavy Duty Iron Plate, Cupiditate provident molestiae laborum ut non et quia ut ut itaq..., 184.49, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="alterarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.046">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.alterarProduto(ProdutoDAOTest.java:175)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (136, 0fc684e3-, Synergistic Bronze Knife, Nisi aut ut architecto perspiciatis omnis quo consectetur conseq..., 662.86, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="alterarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.042">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.alterarProduto(ProdutoDAOTest.java:175)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (141, 9b380c2e-, Enormous Aluminum Chair, Voluptas ea qui officiis harum amet enim nisi voluptate inventor..., 521.62, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="buscarTodos" classname="com.leonardo.dao.ProdutoDAOTest" time="0.041">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.buscarTodos(ProdutoDAOTest.java:207)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (137, 0a9f0593-, Mediocre Linen Keyboard, Rerum quasi et odio dolores quia a voluptatem rerum et aut volup..., 487.07, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="buscarTodos" classname="com.leonardo.dao.ProdutoDAOTest" time="0.047">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.buscarTodos(ProdutoDAOTest.java:207)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (142, 78cbe8e9-, Synergistic Iron Pants, Quos voluptatibus architecto quasi voluptates a tenetur libero o..., 484.27, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="cadastrarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.042">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.cadastrarProduto(ProdutoDAOTest.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (138, deccd464-, Durable Granite Coat, Aliquam pariatur repellendus labore eligendi harum eum commodi s..., 734.46, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="cadastrarProduto" classname="com.leonardo.dao.ProdutoDAOTest" time="0.047">
+    <error message="ERRO CADASTRANDO OBJETO " type="com.leonardo.exceptions.DAOException"><![CDATA[com.leonardo.exceptions.DAOException: ERRO CADASTRANDO OBJETO 
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:112)
+	at com.leonardo.dao.ProdutoDAOTest.cadastrarProduto(ProdutoDAOTest.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.postgresql.util.PSQLException: ERRO: o valor nulo na coluna "ativo" da relação "tb_produto" viola a restrição de não-nulo
+  Detalhe: Registro que falhou contém (143, 1484e479-, Incredible Granite Gloves, Veritatis in sit corporis odio consequatur pariatur perferendis ..., 510.94, 1, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2423)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:374)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.leonardo.infrastructure.dao.generic.GenericDAO.cadastrar(GenericDAO.java:99)
+	... 4 more
+]]></error>
+  </testcase>
 </testsuite>

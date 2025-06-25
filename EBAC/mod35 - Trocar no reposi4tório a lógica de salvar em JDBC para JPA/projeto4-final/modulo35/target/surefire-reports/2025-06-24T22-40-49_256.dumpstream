@@ -1,0 +1,5 @@
+# Created at 2025-06-24T22:40:49.460
+Boot Manifest-JAR contains absolute paths in classpath 'D:\repositorios\Backend-Java\EBAC\mod35 - Trocar no reposi4tório a lógica de salvar em JDBC para JPA\projeto4-final\modulo35\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
