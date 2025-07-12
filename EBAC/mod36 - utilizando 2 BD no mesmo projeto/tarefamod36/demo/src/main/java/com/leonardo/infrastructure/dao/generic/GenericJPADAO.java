@@ -8,12 +8,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.leonardo.domain.Persistente;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.gateway.jpa.IGenericJPAGateway;
-import com.leonardo.infrastructure.dao.Persistente;
+import com.leonardo.gateway.jpa.generic.IGenericJPAGateway;
 
 
 public class GenericJPADAO<T extends Persistente, E extends Serializable> implements IGenericJPAGateway<T, E> {

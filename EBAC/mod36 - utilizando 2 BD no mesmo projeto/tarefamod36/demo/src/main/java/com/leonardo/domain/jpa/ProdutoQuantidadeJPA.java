@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.leonardo.infrastructure.dao.Persistente;
+import com.leonardo.domain.Persistente;
 
 import lombok.Getter;
 import lombok.Setter;
