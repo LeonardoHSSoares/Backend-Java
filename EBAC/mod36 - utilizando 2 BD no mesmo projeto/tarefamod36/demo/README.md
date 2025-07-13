@@ -1,30 +1,18 @@
-# Projeto Backend Java - EBAC (Módulo 35)
+# Projeto Backend Java - EBAC (Módulo 36)
 
-Este projeto é uma aplicação de backend desenvolvida em Java, utilizando JPA para persistência de dados e estruturada segundo os princípios da Clean Architecture. O objetivo principal é demonstrar, de forma prática e didática, como construir um sistema robusto, modular e de fácil manutenção, aplicando boas práticas de organização de código, separação de responsabilidades, testes automatizados e integração com banco de dados relacional.
+Este projeto é uma evolução do módulo 35, agora com suporte a múltiplos bancos de dados utilizando apenas JPA. Toda a camada JDBC foi removida e, na camada de infraestrutura, foram adicionadas classes abstratas para facilitar a implementação de DAOs para diferentes bancos de dados.
 
-Além disso, o projeto explora o mapeamento de entidades JPA com diferentes tipos de relacionamentos entre tabelas, como:
+## Principais mudanças em relação ao módulo 35
 
-- **Relacionamento OneToMany e ManyToOne:**  
-  Exemplo: Uma venda (`VendaJPA`) pode conter vários produtos (`ProdutoQuantidadeJPA`), enquanto cada item de produto está associado a uma única venda.
-- **Relacionamento ManyToOne:**  
-  Exemplo: Cada venda está associada a um cliente (`ClienteJPA`), mas um cliente pode ter várias vendas.
-- **Relacionamento com atributos compostos:**  
-  Exemplo: A entidade `ProdutoQuantidadeJPA` representa a quantidade de um produto em uma venda, fazendo a ligação entre `VendaJPA` e `ProdutoJPA`.
-
-Esses relacionamentos são refletidos nas anotações JPA das entidades e garantem a integridade referencial no banco de dados.
-
-## Tecnologias Utilizadas
-
-- Java 11+
-- Maven
-- JPA (Hibernate)
-- PostgreSQL
-- JUnit 5
+- **Remoção completa da camada JDBC:**  
+  Todo o código relacionado ao JDBC foi eliminado do projeto, tornando a persistência 100% baseada em JPA.
+- **Infraestrutura com DAOs abstratos para múltiplos bancos:**  
+  Foram criadas classes abstratas na camada `infrastructure/dao/generic` para cada banco de dados (ex: `GenericJPADB1DAO`, `GenericJPADB2DAO`, `GenericJPADB3DAO`). Cada DAO concreto herda da respectiva classe abstrata, facilitando a troca e o uso de múltiplos bancos no mesmo projeto.
 
 ## Estrutura do Projeto
 
 ```
-modulo35/
+modulo36/
 ├── pom.xml
 ├── src/
 │   ├── main/
@@ -32,24 +20,28 @@ modulo35/
 │   │   │   └── com/leonardo/
 │   │   │       ├── domain/         # Entidades de negócio (JPA)
 │   │   │       ├── gateway/        # Interfaces (contratos) de persistência
-│   │   │       ├── infrastructure/ # Implementações concretas (JPA, JDBC, etc)
+│   │   │       ├── infrastructure/ # Implementações concretas (JPA, DAOs abstratos por banco)
 │   │   │       ├── service/        # Serviços e casos de uso
 │   │   └── resources/
 │   │       └── META-INF/
 │   │           └── persistence.xml # Configuração do JPA
 │   └── test/
 │       └── java/
-│           └── com/leonardo/
-│               ├── mock/           # Mocks para testes
-│               ├── dao/            # Testes de DAOs
-│               └── jpa/            # Testes de DAOs JPA
 └── target/
 ```
 
+## Tecnologias Utilizadas
+
+- Java 11+
+- Maven
+- JPA (Hibernate)
+- PostgreSQL, MySQL (exemplo de múltiplos bancos)
+- JUnit 5
+
 ## Como rodar o projeto
 
-1. **Configure o banco de dados PostgreSQL**  
-   Crie um banco de dados e ajuste as credenciais no arquivo `src/main/resources/META-INF/persistence.xml`.
+1. **Configure os bancos de dados**  
+   Crie os bancos necessários (ex: PostgreSQL, MySQL) e ajuste as credenciais no arquivo `src/main/resources/META-INF/persistence.xml`.
 
 2. **Execute as migrations (DDL)**  
    Utilize o script SQL disponível em `src/main/resources` ou conforme o arquivo `SQLs.sql` para criar as tabelas necessárias.
@@ -68,18 +60,18 @@ modulo35/
 
 - **Clean Architecture:** Separação clara entre domínio, gateways (contratos), infraestrutura (implementações) e serviços.
 - **JPA:** Mapeamento objeto-relacional para persistência das entidades, incluindo relacionamentos entre tabelas.
+- **DAOs abstratos para múltiplos bancos:** Facilita a implementação e manutenção de DAOs para diferentes bancos de dados.
 - **Testes automatizados:** Cobertura de testes para DAOs, serviços e regras de negócio.
-- **Mock e DAO de teste:** Facilita a validação das regras sem dependência do banco.
 
 ## Pastas importantes
 
 - `domain`: Entidades do sistema (ex: ClienteJPA, ProdutoJPA, VendaJPA, ProdutoQuantidadeJPA).
 - `gateway`: Interfaces de persistência (ex: IClienteJPAGateway, IProdutoJPAGateway).
-- `infrastructure`: Implementações concretas das interfaces de gateway.
+- `infrastructure`: Implementações concretas das interfaces de gateway e DAOs abstratos por banco.
 - `service`: Serviços de negócio e casos de uso.
 - `test`: Testes automatizados (JUnit 5).
 
 ## Contato
 
 Projeto desenvolvido para fins educacionais no curso de Backend Java da EBAC.  
-Autor:
+Autor: Leonardo Soares
