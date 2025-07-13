@@ -1,0 +1,136 @@
+-------------------------------------------------------------------------------
+Test set: com.leonardo.jpa.VendaJpaDAOTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.049 s <<< FAILURE! -- in com.leonardo.jpa.VendaJpaDAOTest
+com.leonardo.jpa.VendaJpaDAOTest.removerApenasUmProduto -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.salvarVendaMesmoCodigoExistente -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.finalizarVenda -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.cancelarVenda -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.salvar -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.tentarAdicionarProdutosVendaFinalizada -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.removerTodosProdutos -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.adicionarMaisProdutosDiferentes -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.adicionarMaisProdutosDoMesmo -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.removerProduto -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
+com.leonardo.jpa.VendaJpaDAOTest.pesquisar -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IClienteJPAGateway.cadastrar(com.leonardo.domain.Persistente)" because "this.clienteDao" is null
+	at com.leonardo.jpa.VendaJpaDAOTest.cadastrarCliente(VendaJpaDAOTest.java:345)
+	at com.leonardo.jpa.VendaJpaDAOTest.init(VendaJpaDAOTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "com.leonardo.gateway.jpa.IVendaJPAGateway.buscarTodos()" because "this.vendaExclusaoDao" is null
+		at com.leonardo.jpa.VendaJpaDAOTest.excluirVendas(VendaJpaDAOTest.java:314)
+		at com.leonardo.jpa.VendaJpaDAOTest.end(VendaJpaDAOTest.java:69)
+		... 3 more
+
