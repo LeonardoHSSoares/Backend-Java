@@ -22,7 +22,7 @@ import com.leonardo.infrastructure.dao.generic.GenericJPADAO;
 public class VendaJPADAO extends GenericJPADAO<VendaJPA, Long> implements IVendaJPAGateway {
 
 	public VendaJPADAO() {
-		super(VendaJPA.class);
+		super(VendaJPA.class, "postgres");
 	}
 
 	@Override

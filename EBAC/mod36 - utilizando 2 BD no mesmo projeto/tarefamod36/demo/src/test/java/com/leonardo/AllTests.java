@@ -3,15 +3,16 @@ package com.leonardo;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
-import com.leonardo.dao.ClienteDAOTest;
-import com.leonardo.dao.ProdutoDAOTest;
-import com.leonardo.dao.VendaDAOTest;
+import com.leonardo.jpa.ClienteJPADAO2BancosTest;
+import com.leonardo.jpa.ClienteJPADAO3BancosTest;
+import com.leonardo.jpa.ClienteJPADAOTest;
+
 
 @Suite
 @SelectClasses({
-    ClienteDAOTest.class,
-    ProdutoDAOTest.class,
-    VendaDAOTest.class
+    ClienteJPADAOTest.class,
+    ClienteJPADAO2BancosTest.class,
+    ClienteJPADAO3BancosTest.class
 })
 public class AllTests { 
     // This class remains empty, it is used only as a holder for the above annotations

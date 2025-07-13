@@ -1,4 +1,4 @@
-package com.leonardo.gateway.jpa.generic;
+package com.leonardo.gateway.generic;
 
 import java.io.Serializable;
 import java.util.Collection;

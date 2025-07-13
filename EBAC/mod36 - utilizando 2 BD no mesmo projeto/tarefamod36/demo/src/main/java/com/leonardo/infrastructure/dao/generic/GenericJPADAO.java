@@ -13,21 +13,26 @@ import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.gateway.jpa.generic.IGenericJPAGateway;
+import com.leonardo.gateway.generic.IGenericJPAGateway;
 
 
 public class GenericJPADAO<T extends Persistente, E extends Serializable> implements IGenericJPAGateway<T, E> {
 
-    protected EntityManagerFactory entityManagerFactory;
-	
+	private static final String PERSISTENCE_UNIT_NAME = "postgres";
+
+	protected EntityManagerFactory entityManagerFactory;
+
 	protected EntityManager entityManager;
-	
+
 	private Class<T> persistenteClass;
-	
-	public GenericJPADAO(Class<T> persistenteClass) {
+
+	private String persistenceUnitName;
+
+	public GenericJPADAO(Class<T> persistenteClass, String persistenceUnitName) {
 		this.persistenteClass = persistenteClass;
+		this.persistenceUnitName = persistenceUnitName;
 	}
-	
+
 	@Override
 	public T cadastrar(T entity) throws TipoChaveNaoEncontradaException, DAOException {
 		openConnection();
@@ -67,30 +72,37 @@ public class GenericJPADAO<T extends Persistente, E extends Serializable> implem
 	@Override
 	public Collection<T> buscarTodos() throws DAOException {
 		openConnection();
-		List<T> list =
-				entityManager.createQuery(getSelectSql(), this.persistenteClass).getResultList();
+		List<T> list = entityManager.createQuery(getSelectSql(), this.persistenteClass).getResultList();
 		closeConnection();
 		return list;
 	}
-	
+
 	protected void openConnection() {
-		entityManagerFactory =
-				Persistence.createEntityManagerFactory("ExemploJPA");
+		entityManagerFactory = Persistence.createEntityManagerFactory(getPersistenceUnitName());
 		entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 	}
-	
+
 	protected void closeConnection() {
 		entityManager.close();
 		entityManagerFactory.close();
 	}
-	
+
 	private String getSelectSql() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("SELECT obj FROM ");
 		sb.append(this.persistenteClass.getSimpleName());
 		sb.append(" obj");
 		return sb.toString();
+	}
+
+	private String getPersistenceUnitName() {
+		if (persistenceUnitName != null
+				&& !"".equals(persistenceUnitName)) {
+			return persistenceUnitName;
+		} else {
+			return PERSISTENCE_UNIT_NAME;
+		}
 	}
 
 }

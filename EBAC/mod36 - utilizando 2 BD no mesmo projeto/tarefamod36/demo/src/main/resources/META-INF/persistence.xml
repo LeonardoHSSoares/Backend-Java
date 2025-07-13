@@ -4,17 +4,19 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     version="2.1">
 
-    <persistence-unit name="ExemploJPA">
+    <persistence-unit name="postgres">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.modulo35.domain.ClienteJPA</class>
+        <class>com.leonardo.domain.ClienteJPA</class>
+        <class>com.leonardo.domain.ProdutoJPA</class>
+        <class>com.leonardo.domain.VendaJPA</class>
         <!-- Adicione outras entidades conforme necessário -->
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB
             Driver -->
             <property name="javax.persistence.jdbc.url"
-                value="jdbc:postgresql://localhost:15432/leonardo" /> <!-- BD Mane -->
-            <property name="javax.persistence.jdbc.user" value="" /> <!-- DB User -->
+                value="jdbc:postgresql://localhost:5432/postgres" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
             <property name="javax.persistence.jdbc.password" value="" /> <!-- DB Password -->
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> <!--
@@ -25,5 +27,62 @@
             <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
         </properties>
+    </persistence-unit>
+
+    <persistence-unit name="postgre2">
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <class>br.com.rpires.domain.jpa.ClienteJpa</class>
+        <class>br.com.rpires.domain.jpa.ProdutoJpa</class>
+        <class>br.com.rpires.domain.jpa.VendaJpa</class>
+        <class>br.com.rpires.domain.jpa.ProdutoQuantidadeJpa</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB
+            Driver -->
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:postgresql://localhost:15432/vendas_online_2" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> <!--
+            DB Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop /
+            update -->
+
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+        </properties>
+
+    </persistence-unit>
+
+    <persistence-unit name="mysql">
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <class>br.com.rpires.domain.jpa.ClienteJpa2</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" /> <!-- DB
+            Driver -->
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:mysql://localhost:3306/vendas_online" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="admin" /> <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" /> <!-- DB
+            Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop /
+            update -->
+
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+        </properties>
+
     </persistence-unit>
 </persistence>

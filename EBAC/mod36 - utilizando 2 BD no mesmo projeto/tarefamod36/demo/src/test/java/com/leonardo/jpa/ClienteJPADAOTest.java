@@ -24,7 +24,7 @@ import com.leonardo.infrastructure.dao.jpa.ClienteJPADAO;
  */
 public class ClienteJPADAOTest {
 	
-	private IClienteJPAGateway clienteDao;
+	private IClienteJPAGateway<ClienteJPA> clienteDao;
 	
 	private Random rd;
 	

@@ -8,7 +8,8 @@ import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.gateway.jpa.generic.IGenericJPAGateway;
+import com.leonardo.gateway.generic.IGenericJPAGateway;
+
 
 
 public abstract class GenericJPAService<T extends Persistente, E extends Serializable>

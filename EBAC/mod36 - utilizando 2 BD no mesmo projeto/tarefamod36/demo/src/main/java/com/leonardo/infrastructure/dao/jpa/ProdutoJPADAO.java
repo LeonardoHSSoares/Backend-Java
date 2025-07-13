@@ -7,7 +7,7 @@ import com.leonardo.infrastructure.dao.generic.GenericJPADAO;
 public class ProdutoJPADAO extends GenericJPADAO<ProdutoJPA, Long> implements IProdutoJPAGateway {
 
 	public ProdutoJPADAO() {
-		super(ProdutoJPA.class);
+		super(ProdutoJPA.class, "postgres");
 	}
 
 }

@@ -3,7 +3,7 @@ package com.leonardo.gateway.jpa;
 import com.leonardo.domain.jpa.VendaJPA;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
-import com.leonardo.gateway.jpa.generic.IGenericJPAGateway;
+import com.leonardo.gateway.generic.IGenericJPAGateway;
 
 /**
  * @author Leonardo Soares
