@@ -46,4 +46,6 @@ public abstract class GenericJPAService<T extends Persistente, E extends Seriali
         return this.dao.buscarTodos();
     }
 
+    
+
 }

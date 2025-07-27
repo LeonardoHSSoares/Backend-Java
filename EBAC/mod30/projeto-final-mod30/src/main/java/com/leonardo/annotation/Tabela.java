@@ -1,4 +1,4 @@
-package annotation;
+package com.leonardo.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -17,13 +17,9 @@ import java.lang.annotation.Target;
  * O valor padrão é uma string vazia, mas pode ser alterado conforme necessário.
  */
 @Documented
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ColunaTabela {
+public @interface Tabela {
 
-    String dbName();
-
-    String setJavaName();
-
-
+    String value();
 }

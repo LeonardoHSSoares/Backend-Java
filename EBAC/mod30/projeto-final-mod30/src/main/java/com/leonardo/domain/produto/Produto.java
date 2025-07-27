@@ -2,11 +2,11 @@ package com.leonardo.domain.produto;
 
 import java.math.BigDecimal;
 
+import com.leonardo.annotation.ColunaTabela;
+import com.leonardo.annotation.Tabela;
+import com.leonardo.annotation.TipoChave;
 import com.leonardo.dao.Persistence;
 
-import annotation.ColunaTabela;
-import annotation.Tabela;
-import annotation.TipoChave;
 import lombok.Getter;
 import lombok.Setter;
 

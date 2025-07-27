@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.leonardo.annotation.ColunaTabela;
+import com.leonardo.annotation.Tabela;
+import com.leonardo.annotation.TipoChave;
 import com.leonardo.dao.Persistence;
 import com.leonardo.domain.factory.jdbc.ConnectionFactory;
 import com.leonardo.exceptions.DAOException;
@@ -21,10 +24,6 @@ import com.leonardo.exceptions.MaisDeUmRegistroException;
 import com.leonardo.exceptions.TableException;
 import com.leonardo.exceptions.TipoChaveNaoEncontradaException;
 import com.leonardo.exceptions.TipoElementoNaoConhecidoException;
-
-import annotation.ColunaTabela;
-import annotation.Tabela;
-import annotation.TipoChave;
 
 /**
  * @author Leonardo Soares

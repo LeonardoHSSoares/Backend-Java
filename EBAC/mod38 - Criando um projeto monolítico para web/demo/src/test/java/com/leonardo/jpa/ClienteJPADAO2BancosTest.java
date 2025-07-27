@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import com.github.javafaker.Faker;
 import com.leonardo.domain.jpa.ClienteJPA;
 import com.leonardo.exceptions.DAOException;
 import com.leonardo.exceptions.MaisDeUmRegistroException;
@@ -165,6 +166,18 @@ public class ClienteJPADAO2BancosTest {
 		cliente.setEstado("SP");
 		cliente.setNumero(10);
 		cliente.setTel(1199999999L);
+		return cliente;
+	}
+
+	private ClienteJPA criarClienteDB2() {
+		ClienteJPA cliente = new ClienteJPA();
+		Faker faker = new Faker();
+		cliente.setCpf(faker.number().randomNumber(11, true));
+		cliente.setNome(faker.name().fullName());
+		cliente.setCidade(faker.address().city());
+		cliente.setEnd(faker.address().streetAddress());
+		cliente.setEstado(faker.address().stateAbbr());
+		cliente.setNumero(faker.number().numberBetween(1, 100));
 		return cliente;
 	}
 }
