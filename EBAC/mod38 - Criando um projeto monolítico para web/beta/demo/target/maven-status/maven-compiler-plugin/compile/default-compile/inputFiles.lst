@@ -1,0 +1,10 @@
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\exceptions\DAOException.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\dao\generic\IGenericDAO.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\domain\Persistente.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\service\generic\IGenericService.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\dao\generic\GenericDAO.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\service\generic\GenericService.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\exceptions\MaisDeUmRegistroException.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\exceptions\TipoChaveNaoEncontradaException.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\exceptions\TableException.java
+D:\repositorios\Backend-Java\EBAC\mod38 - Criando um projeto monolítico para web\beta\demo\src\main\java\com\leonardo\exceptions\TipoElementoNaoConhecidoException.java
