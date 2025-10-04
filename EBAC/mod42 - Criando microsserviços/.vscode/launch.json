@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigServerApplication<ConfigServer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.leonardo.ConfigServer.ConfigServerApplication",
+            "projectName": "ConfigServer",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientServiceApplication<ClientService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.leonardo.ClientService.ClientServiceApplication",
+            "projectName": "ClientService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProdutoServiceApplication<ProdutoService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.leonardo.ProdutoService.ProdutoServiceApplication",
+            "projectName": "ProdutoService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
