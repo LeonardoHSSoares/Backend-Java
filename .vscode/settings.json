@@ -1,8 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "EBAC/mod24"
-    ],
-    "java.project.referencedLibraries": [],
-    "maven.view": "hierarchical",
-    "java.format.settings.url": ".vscode/java-formatter.xml"
-}
